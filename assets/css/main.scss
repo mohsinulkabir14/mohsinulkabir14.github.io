@@ -10,10 +10,30 @@ search: false
 
 
 /*  override fonts */
+/* Apply Charter font */
+
+/* Body text */
 body {
-  font-family: "Charter", 'Bitstream Charter', 'Sitka Text', Cambria, serif;
+  font-family: Charter, "Bitstream Charter", Georgia, serif !important;
 }
 
+/* Headings (H1–H6) */
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Charter", serif;
+  font-family: Charter, "Bitstream Charter", Georgia, serif !important;
+}
+
+/* Site title (top-left corner or splash) */
+.site-title {
+  font-family: Charter, "Bitstream Charter", Georgia, serif !important;
+}
+
+/* Site description / subtitle */
+.site-description {
+  font-family: Charter, "Bitstream Charter", Georgia, serif !important;
+}
+
+/* Author profile (name + bio in sidebar or splash) */
+.author__name,
+.author__bio {
+  font-family: Charter, "Bitstream Charter", Georgia, serif !important;
 }
