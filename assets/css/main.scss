@@ -36,12 +36,12 @@ h1, h2, h3, h4, h5, h6 {
 .author__name,
 .author__links,
 .author__bio {
-  font-family: Charter, "Bitstream Charter", Georgia, serif !important;
+  font-family: Charter, "Bitstream Charter" !important;
 }
 
 /*  override avatar */
 .author__avatar img {
-  width: 400px !important;   /* change size */
+  width: 600px !important;   /* change size */
   height: auto !important;   /* keep proportions */
   border-radius: 20%;        /* circle (default) */
 }
