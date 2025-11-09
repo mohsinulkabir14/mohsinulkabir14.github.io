@@ -1,9 +1,10 @@
 name: Check for broken links on site
 
 on:
-  workflow_run:
-    workflows: [Deploy site]
-    types: [completed]
+  workflow_dispatch: {}
+  # workflow_run:
+  #   workflows: [Deploy site]
+  #   types: [completed]
 
 jobs:
   check-links-on-site:
@@ -40,7 +41,7 @@ jobs:
           npm install -g purgecss
           purgecss -c purgecss.config.js
       - name: Link Checker 🔗
-        uses: lycheeverse/lychee-action@v2.0.2
+        uses: lycheeverse/lychee-action@v1.9.0
         with:
           fail: true
           # only check local links
