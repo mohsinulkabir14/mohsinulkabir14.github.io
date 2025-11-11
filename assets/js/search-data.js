@@ -392,13 +392,13 @@ ninja.data = [{
           section: "Books",handler: () => {
               window.location.href = "/books/the_godfather/";
             },},{id: "news-two-papers-accepted-at-emnlp-2025-on-cultural-alignment-and-cultural-bias-interpretability",
-          title: 'Two papers accepted at EMNLP 2025 on Cultural Alignment and Cultural Bias Interpretability....',
+          title: '🎉 Two papers accepted at EMNLP 2025 on Cultural Alignment and Cultural Bias...',
           description: "",
-          section: "News",},{id: "news-one-paper-accepted-at-ai-amp-amp-society-on-religious-bias",
-          title: 'One paper accepted at AI &amp;amp;amp; Society on Religious Bias.',
+          section: "News",},{id: "news-our-work-on-religious-bias-bas-been-accepted-by-the-jounral-of-ai-amp-amp-society-the-paper-is-available-on-arxiv",
+          title: '🎉 Our work on Religious Bias bas been accepted by the Jounral of...',
           description: "",
-          section: "News",},{id: "news-new-preprint-available-on-cross-cultural-translation",
-          title: 'New preprint available on Cross-Cultural Translation.',
+          section: "News",},{id: "news-our-collaborative-work-on-cross-cultural-translation-is-now-available-on-arxiv",
+          title: '📝 Our collaborative work on Cross-Cultural Translation is now available on arXiv.',
           description: "",
           section: "News",},{id: "projects-project-1",
           title: 'project 1',
