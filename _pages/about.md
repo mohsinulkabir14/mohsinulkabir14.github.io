@@ -1,8 +1,8 @@
 ---
 layout: about
-title: about
+title: About
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
+subtitle: Email at <a href="mailto:mdmohsinul.kabir@manchester.ac.uk">mdmohsinul.kabir@manchester.ac.uk</a>
 
 profile:
   align: right
