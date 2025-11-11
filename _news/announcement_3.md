@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Two papers accepted at EMNLP 2025 on [Cultural Alignment](https://aclanthology.org/2025.emnlp-main.2/) and [Cultural Bias Interpretability](https://aclanthology.org/2025.findings-emnlp.1003/). 
+🎉 Two papers accepted at EMNLP 2025 on [Cultural Alignment](https://aclanthology.org/2025.emnlp-main.2/) and [Cultural Bias Interpretability](https://aclanthology.org/2025.findings-emnlp.1003/). 

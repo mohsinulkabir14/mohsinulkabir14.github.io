@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-New [preprint](https://www.arxiv.org/abs/2510.25967) available on Cross-Cultural Translation.
+📝 Our collaborative work on Cross-Cultural Translation is now available on [arXiv](https://www.arxiv.org/abs/2510.25967). 
