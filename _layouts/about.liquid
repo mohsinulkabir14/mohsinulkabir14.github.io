@@ -2,74 +2,78 @@
 layout: default
 ---
 <div class="post">
-  <header class="post-header">
-    {% if page.profile %}
-      <div class="profile-top text-center">
-        {% if page.profile.image %}
-          {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
-          {% if page.profile.image_circular %}
-            {% assign profile_image_class = 'img-fluid z-depth-1 rounded-circle' %}
-          {% else %}
-            {% assign profile_image_class = 'img-fluid z-depth-1 rounded' %}
-          {% endif %}
-          {%
-            include figure.liquid loading="eager" path=profile_image_path class=profile_image_class alt=page.profile.image
-            cache_bust=true
-          %}
+  <div class="row about-row">
+
+    <!-- Left sidebar -->
+    <div class="col-12 col-md-3 about-sidebar">
+      {% if page.profile and page.profile.image %}
+        {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
+        {% if page.profile.image_circular %}
+          {% assign profile_image_class = 'img-fluid z-depth-1 rounded-circle sidebar-photo' %}
+        {% else %}
+          {% assign profile_image_class = 'img-fluid z-depth-1 rounded sidebar-photo' %}
         {% endif %}
-        <h1 class="post-title">
-          {% if site.title == 'blank' %}
-            <span class="font-weight-bold">{{ site.first_name }}</span>
-            {% if site.middle_name %} {{ site.middle_name }}{% endif %}
-            {{ site.last_name }}
-          {% else %}
-            {{ site.title }}
-          {% endif %}
-        </h1>
-        {% if page.subtitle %}
-          <p class="desc">{{ page.subtitle }}</p>
+        {%
+          include figure.liquid loading="eager" path=profile_image_path class=profile_image_class alt=page.profile.image
+          cache_bust=true
+        %}
+      {% endif %}
+
+      <h3 class="sidebar-name">
+        {% if site.title == 'blank' %}
+          <strong>{{ site.first_name }}</strong>
+          {% if site.middle_name %} {{ site.middle_name }}{% endif %}
+          {{ site.last_name }}
+        {% else %}
+          {{ site.title }}
         {% endif %}
-        {% if page.profile.more_info %}
-          <div class="more-info">{{ page.profile.more_info }}</div>
-        {% endif %}
-        <div class="contact-icons">{% include social.liquid %}</div>
-      </div>
-      <hr>
-    {% else %}
+      </h3>
+
+      {% if page.subtitle %}
+        <p class="sidebar-affiliation">{{ page.subtitle }}</p>
+      {% endif %}
+
+      {% if page.profile.more_info %}
+        <p class="sidebar-more-info">{{ page.profile.more_info }}</p>
+      {% endif %}
+
+      {% include sidebar_social.liquid %}
+    </div>
+
+    <!-- Right main content -->
+    <div class="col-12 col-md-9 about-content">
       <h1 class="post-title">
         {% if site.title == 'blank' %}
-          <span class="font-weight-bold">{{ site.first_name }}</span>
+          <strong>{{ site.first_name }}</strong>
           {% if site.middle_name %} {{ site.middle_name }}{% endif %}
           {{ site.last_name }}
         {% else %}
           {{ site.title }}
         {% endif %}
       </h1>
-      <p class="desc">{{ page.subtitle }}</p>
-    {% endif %}
-  </header>
 
-  <article>
-    <div class="clearfix">{{ content }}</div>
+      <div class="clearfix">{{ content }}</div>
 
-    <!-- News -->
-    {% if page.announcements and page.announcements.enabled %}
-      <h2>
-        <a href="{{ '/news/' | relative_url }}" style="color: inherit">Recent News</a>
-      </h2>
-      {% include news.liquid limit=true %}
-    {% endif %}
+      <!-- News -->
+      {% if page.announcements and page.announcements.enabled %}
+        <h2>
+          <a href="{{ '/news/' | relative_url }}" style="color: inherit">Recent News</a>
+        </h2>
+        {% include news.liquid limit=true %}
+      {% endif %}
 
-    <!-- Selected papers -->
-    {% if page.selected_papers %}
-      <h2>
-        <a href="{{ '/publications/' | relative_url }}" style="color: inherit">Selected Publications</a>
-      </h2>
-      {% include selected_papers.liquid %}
-    {% endif %}
+      <!-- Selected papers -->
+      {% if page.selected_papers %}
+        <h2>
+          <a href="{{ '/publications/' | relative_url }}" style="color: inherit">Selected Publications</a>
+        </h2>
+        {% include selected_papers.liquid %}
+      {% endif %}
 
-    {% if site.newsletter and site.newsletter.enabled and site.footer_fixed %}
-      {% include newsletter.liquid center=true %}
-    {% endif %}
-  </article>
+      {% if site.newsletter and site.newsletter.enabled and site.footer_fixed %}
+        {% include newsletter.liquid center=true %}
+      {% endif %}
+    </div>
+
+  </div>
 </div>

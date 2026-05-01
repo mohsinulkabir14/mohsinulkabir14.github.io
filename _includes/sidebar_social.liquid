@@ -1,0 +1,32 @@
+<ul class="sidebar-social-list">
+  {% for social in site.data.socials %}
+    {% case social[0] %}
+      {% when 'email' %}
+        <li><a href="mailto:{{ social[1] | encode_email }}"><i class="fa-solid fa-envelope"></i> Email</a></li>
+      {% when 'github_username' %}
+        <li><a href="https://github.com/{{ social[1] }}"><i class="fa-brands fa-github"></i> GitHub</a></li>
+      {% when 'linkedin_username' %}
+        <li><a href="https://www.linkedin.com/in/{{ social[1] }}"><i class="fa-brands fa-linkedin"></i> LinkedIn</a></li>
+      {% when 'scholar_userid' %}
+        <li><a href="https://scholar.google.com/citations?user={{ social[1] }}"><i class="ai ai-google-scholar"></i> Scholar</a></li>
+      {% when 'orcid_id' %}
+        <li><a href="https://orcid.org/{{ social[1] }}"><i class="ai ai-orcid"></i> ORCID</a></li>
+      {% when 'twitter_username' %}
+        <li><a href="https://twitter.com/{{ social[1] }}"><i class="fa-brands fa-x-twitter"></i> Twitter</a></li>
+      {% when 'x_username' %}
+        <li><a href="https://twitter.com/{{ social[1] }}"><i class="fa-brands fa-x-twitter"></i> X</a></li>
+      {% when 'bluesky_url' %}
+        <li><a href="{{ social[1] }}"><i class="fa-brands fa-bluesky"></i> Bluesky</a></li>
+      {% when 'instagram_id' %}
+        <li><a href="https://instagram.com/{{ social[1] }}"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
+      {% when 'semanticscholar_id' %}
+        <li><a href="https://www.semanticscholar.org/author/{{ social[1] }}"><i class="ai ai-semantic-scholar"></i> Semantic Scholar</a></li>
+      {% when 'dblp_url' %}
+        <li><a href="{{ social[1] }}"><i class="ai ai-dblp"></i> DBLP</a></li>
+      {% when 'research_gate_profile' %}
+        <li><a href="https://www.researchgate.net/profile/{{ social[1] }}/"><i class="ai ai-researchgate"></i> ResearchGate</a></li>
+      {% when 'work_url' %}
+        <li><a href="{{ social[1] }}"><i class="fa-solid fa-briefcase"></i> Website</a></li>
+    {% endcase %}
+  {% endfor %}
+</ul>
