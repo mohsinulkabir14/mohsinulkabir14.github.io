@@ -48,8 +48,9 @@ body.sticky-bottom-footer {
   text-align: left;
 
   .sidebar-photo {
-    width: 100%;
-    max-width: 200px;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
     display: block;
     margin-bottom: 1rem;
   }
