@@ -150,6 +150,9 @@ collections:
     defaults:
       layout: post
     output: true
+    # Order comes from each item's `date:` front matter, not the filename,
+    # so new announcements can use any filename without renumbering.
+    sort_by: date
   projects:
     output: true
 
