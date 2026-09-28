@@ -1,9 +1,37 @@
-"AJP":
-  url: https://aapt.scitation.org/journal/ajp
-  color: "#00369f"
+# Venue badges shown next to each publication (keyed by the `abbr` field in papers.bib).
+# `url` makes the badge a link; `color` (optional) overrides the badge colour.
 
-"PhysRev":
-  url: https://journals.aps.org/
-
-"Vision":
-  color: "#009f36"
+"ACL":
+  url: https://www.aclweb.org/
+"ACL SRW":
+  url: https://www.aclweb.org/
+"EMNLP":
+  url: https://www.aclweb.org/
+"LREC":
+  url: https://lrec-conf.org/
+"LREC-COLING":
+  url: https://lrec-coling-2024.org/
+"COLING-W":
+  url: https://aclanthology.org/2025.finnlp-1.0/
+"BLP":
+  url: https://aclanthology.org/2023.banglalp-1.0/
+"NLDB":
+  url: https://link.springer.com/conference/nldb
+"CHB":
+  url: https://www.sciencedirect.com/journal/computers-in-human-behavior
+"AI&Soc":
+  url: https://link.springer.com/journal/146
+"SNAM":
+  url: https://link.springer.com/journal/13278
+"IJHCI":
+  url: https://www.tandfonline.com/journals/hihc20
+"PLOS ONE":
+  url: https://journals.plos.org/plosone/
+"IEEE Access":
+  url: https://ieeeaccess.ieee.org/
+"IEEE BigData":
+  url: https://www.ieeebigdata.com/
+"Exp. Astron.":
+  url: https://link.springer.com/journal/10686
+"MIET":
+  url: https://link.springer.com/book/10.1007/978-3-031-34622-4

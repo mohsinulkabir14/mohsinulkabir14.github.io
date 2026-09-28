@@ -1,384 +1,603 @@
 ---
 ---
 
-@string{aps = {American Physical Society,}}
+% =============================================================================
+% Publications of Mohsinul Kabir
+%
+% Custom fields used by this site (stripped from the public BibTeX):
+%   domain   research area used to group papers on /publications/. One of:
+%            culture | trust | mental-health | figurative | bangla |
+%            reasoning | hci | applied-ml   (see _data/domains.yml)
+%   tldr     one-sentence summary shown under the author list
+%   abbr     venue short name shown in the badge (colours in _data/venues.yml)
+%   selected true -> also shown on the home page
+% =============================================================================
 
 
+% -----------------------------------------------------------------------------
+% Cultural Understanding & Cross-Cultural NLP
+% -----------------------------------------------------------------------------
 
-
-
-@article{kabir2025checkbox,
-  author = {Kabir, M and Abrar, A and Ananiadou, S},
-  journal = {Proceedings of the 2025 Conference on Empirical Methods in Natural Language Processing},
-  year = {2025},
-  month = {nov},
-  note = {https://aclanthology.org/2025.emnlp-main.2/},
-  publisher = {Association for Computational Linguistics},
-  title = {Break the Checkbox: Challenging Closed-Style Evaluations of Cultural Alignment in {LLMs}},
-  doi = {10.18653/v1/2025.emnlp-main.2},
-  pdf = {https://aclanthology.org/2025.emnlp-main.2.pdf},
-  preview = {acl_logo.png},
+@inproceedings{kabir2026xcrbench,
+  title     = {{XCR-Bench}: Benchmarking Cross-Cultural Reasoning in {LLMs} via Culture-Specific Items and {Hall's} Triad},
+  author    = {Kabir, Mohsinul and Ahmed, Tasnim and Rahman, Md Mezbaur and Ji, Shaoxiong and Alhuzali, Hassan and Jiang, Yuechen and Huang, Jimin and Ananiadou, Sophia},
+  booktitle = {Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing},
+  year      = {2026},
+  abbr      = {EMNLP},
+  domain    = {culture},
+  arxiv     = {2601.14063},
+  pdf       = {https://arxiv.org/pdf/2601.14063},
+  code      = {https://github.com/mohsinulkabir14/xcr_bench},
+  tldr      = {A benchmark of 4.1k parallel sentences and 1,098 culture-specific items showing that LLMs recall surface-level culture but fail at deeper cultural reasoning, with regional and ethno-religious biases even within Bengali.},
+  abstract  = {Cross-cultural competence in large language models (LLMs) requires understanding and adapting Culture-Specific Items (CSIs) across varying cultural contexts. However, progress in evaluating this capability remains limited by the lack of high-quality CSI-annotated corpora with parallel cross-cultural sentence pairs. We introduce XCR-Bench, a Cross(X)-Cultural Reasoning Benchmark containing 4.1k parallel sentences and 1,098 CSIs across three reasoning tasks. XCR-Bench integrates Newmark's CSI framework with Hall's Triad of Culture, enabling evaluation across levels of cultural visibility, from observable practices to implicit social norms and values. Experiments on eight multilingual LLMs show that state-of-the-art models exhibit consistent weaknesses in identifying and adapting specific categories of CSIs, revealing a gap between surface-level recall and explicit cultural reasoning. Performance declines significantly on culturally sensitive categories and deeper cultural levels (p<0.005, 8/8 models), and adaptation quality varies systematically across target cultures and Bengali regional variants, indicating encoded regional and ethno-religious biases even within a single linguistic setting. We publicly release the corpus and code to support future research on cross-cultural NLP.},
   bibtex_show = {true},
-  abbr = {NLP},
-  selected = {true}
+  selected  = {true}
 }
 
-@article{kabir2025attention,
-  author = {Kabir, M and Tahsin, T and Ananiadou, S},
-  journal = {Findings of the Association for Computational Linguistics: EMNLP 2025},
-  year = {2025},
-  month = {nov},
-  note = {https://aclanthology.org/2025.findings-emnlp.1003/},
-  publisher = {Association for Computational Linguistics},
-  title = {From n-gram to Attention: How Model Architectures Learn and Propagate Bias in Language Modeling},
-  doi = {10.18653/v1/2025.findings-emnlp.1003},
-  pdf = {https://aclanthology.org/2025.findings-emnlp.1003.pdf},
-  preview = {acl_logo.png},
+@inproceedings{elbadry2026rightframe,
+  title     = {Right Frame, Wrong Rule: Cultural Cues Expose the Financial Knowledge Gap They Were Meant to Close},
+  author    = {Elbadry, Rania and Heakl, Ahmed and Almheiri, Saeed and Zhang, Fan and AlMahri, Muhra and Peng, Xueqing and Kabir, Mohsinul and Wang, Shuyao and Han, Yi and Eletter, Saadeldine and Zhang, Duzhen and Nakov, Preslav and Wang, Yuxia and Koto, Fajri and Xie, Zhuohan},
+  booktitle = {Findings of the Association for Computational Linguistics: EMNLP 2026},
+  year      = {2026},
+  abbr      = {EMNLP},
+  additional_info = {. <strong>Findings</strong>},
+  domain    = {culture},
+  arxiv     = {2609.00999},
+  pdf       = {https://arxiv.org/pdf/2609.00999},
+  tldr      = {In Islamic finance, cultural cues push LLMs toward the "right" normative framework, yet 57-66\% of those framework choices still lead to wrong answers: a stereotype trap that two-choice evaluations hide.},
+  abstract  = {When a question has valid answers under different normative frameworks, a language model must decide which framework to use and whether it can answer correctly within it. We call this setting normative pluralism and study it in Islamic finance using a four-choice taxonomy that separates framework selection from within-framework correctness. This separation reveals the stereotype trap: a cultural cue steers a model toward one framework, but the model selects an incorrect answer within that framework. Across twelve models, two languages, and fifty demographic signals, cultural cues change framework selection and reveal substantial differences in accuracy, especially among non-frontier models. Under the strongest signal, large open-weight models select the Islamic framework 97\% of the time. A two-choice evaluation would report near-perfect alignment, although 57--66\% of those selections are incorrect. These findings motivate, but do not directly test, the competence-conditioned routing hypothesis: models may favor frameworks where they are more accurate, while cultural cues may expose framework-specific competence gaps.},
+  bibtex_show = {true}
+}
+
+@inproceedings{kabir2026labeldrift,
+  title     = {Semantic Label Drift in Cross-Cultural Translation},
+  author    = {Kabir, Mohsinul and Ahmed, Tasnim and Rahman, Md Mezbaur and Giannouris, Polydoros and Ananiadou, Sophia},
+  booktitle = {Proceedings of the Fifteenth Language Resources and Evaluation Conference (LREC 2026)},
+  year      = {2026},
+  pages     = {3714--3724},
+  doi       = {10.63317/5ae9txdv2s3g},
+  url       = {https://aclanthology.org/2026.lrec-1.297/},
+  abbr      = {LREC},
+  domain    = {culture},
+  arxiv     = {2510.25967},
+  html      = {https://aclanthology.org/2026.lrec-1.297/},
+  pdf       = {https://aclanthology.org/2026.lrec-1.297.pdf},
+  code      = {https://github.com/mohsinulkabir14/label_drift},
+  tldr      = {Machine translation, including LLMs, silently changes sentiment labels in culturally sensitive text, and the drift grows with the cultural distance between source and target languages.},
+  abstract  = {Machine Translation (MT) is widely employed to address resource scarcity in low-resource languages by generating synthetic data from high-resource counterparts. While sentiment preservation in translation has long been studied, a critical but underexplored factor is the role of cultural alignment between source and target languages. In this paper, we hypothesize that semantic labels are drifted or altered during MT due to cultural divergence. Through a series of experiments across culturally sensitive and neutral domains, we establish three key findings: (1) MT systems, including modern Large Language Models (LLMs), induce label drift during translation, particularly in culturally sensitive domains; (2) unlike earlier statistical MT tools, LLMs encode cultural knowledge, and leveraging this knowledge can amplify label drift; and (3) cultural similarity or dissimilarity between source and target languages is a crucial determinant of label preservation. Our findings highlight that neglecting cultural factors in MT not only undermines label fidelity but also risks misinterpretation and cultural conflict in downstream applications.},
   bibtex_show = {true},
-  abbr = {NLP},
-  selected = {true}
+  selected  = {true}
+}
+
+@article{jiang2026appear2meaning,
+  title     = {{Appear2Meaning}: A Cross-Cultural Benchmark for Structured Cultural Metadata Inference from Images},
+  author    = {Jiang, Yuechen and Zhang, Enze and Kabir, Mohsinul and Xie, Qianqian and Golfomitsou, Stavroula and Arvanitis, Konstantinos and Ananiadou, Sophia},
+  journal   = {arXiv preprint arXiv:2604.07338},
+  year      = {2026},
+  month     = {apr},
+  doi       = {10.48550/arXiv.2604.07338},
+  abbr      = {arXiv},
+  domain    = {culture},
+  arxiv     = {2604.07338},
+  pdf       = {https://arxiv.org/pdf/2604.07338},
+  tldr      = {A cross-cultural benchmark asking vision-language models to infer creator, origin and period of cultural-heritage objects from images; models pick up fragmented cues and perform very unevenly across cultures.},
+  abstract  = {Recent advances in vision-language models (VLMs) have improved image captioning for cultural heritage. However, inferring structured cultural metadata (e.g., creator, origin, period) from visual input remains underexplored. We introduce a multi-category, cross-cultural benchmark for this task and evaluate VLMs using an LLM-as-Judge framework that measures semantic alignment with reference annotations. To assess cultural reasoning, we report exact-match, partial-match, and attribute-level accuracy across cultural regions. Results show that models capture fragmented signals and exhibit substantial performance variation across cultures and metadata types, leading to inconsistent and weakly grounded predictions. These findings highlight the limitations of current VLMs in structured cultural metadata inference beyond visual perception.},
+  bibtex_show = {true}
+}
+
+@inproceedings{kabir2025checkbox,
+  title     = {Break the Checkbox: Challenging Closed-Style Evaluations of Cultural Alignment in {LLMs}},
+  author    = {Kabir, Mohsinul and Abrar, Ajwad and Ananiadou, Sophia},
+  booktitle = {Proceedings of the 2025 Conference on Empirical Methods in Natural Language Processing},
+  year      = {2025},
+  month     = {nov},
+  pages     = {24--51},
+  publisher = {Association for Computational Linguistics},
+  doi       = {10.18653/v1/2025.emnlp-main.2},
+  url       = {https://aclanthology.org/2025.emnlp-main.2/},
+  abbr      = {EMNLP},
+  additional_info = {. <strong>Main Conference</strong>},
+  domain    = {culture},
+  arxiv     = {2502.08045},
+  html      = {https://aclanthology.org/2025.emnlp-main.2/},
+  pdf       = {https://aclanthology.org/2025.emnlp-main.2.pdf},
+  tldr      = {Multiple-choice surveys underestimate LLM cultural alignment: models align better when answers are unconstrained, and merely reordering survey options flips their outputs.},
+  abstract  = {A large number of studies rely on closed-style multiple-choice surveys to evaluate cultural alignment in Large Language Models (LLMs). In this work, we challenge this constrained evaluation paradigm and explore more realistic, unconstrained approaches. Using the World Values Survey (WVS) and Hofstede Cultural Dimensions as case studies, we demonstrate that LLMs exhibit stronger cultural alignment in less constrained settings, where responses are not forced. Additionally, we show that even minor changes, such as reordering survey choices, lead to inconsistent outputs, exposing the limitations of closed-style evaluations. Our findings advocate for more robust and flexible evaluation frameworks that focus on specific cultural proxies, encouraging more nuanced and accurate assessments of cultural alignment in LLMs.},
+  bibtex_show = {true},
+  selected  = {true}
 }
 
 
+% -----------------------------------------------------------------------------
+% Bias, Misinformation & Trustworthy LLMs
+% -----------------------------------------------------------------------------
+
+@inproceedings{liu2026sameclaim,
+  title     = {Same Claim, Different Judgment: Benchmarking Scenario-Induced Bias in Multilingual Financial Misinformation Detection},
+  author    = {Liu, Zhiwei and Cao, Yupeng and Jiang, Yuechen and Kabir, Mohsinul and Giannouris, Polydoros and Xu, Chen and Xu, Ziyang and Zhu, Tianlei and Tariquzzaman, Md. and Papadopoulos, Triantafillos and Wang, Yan and Qian, Lingfei and Peng, Xueqing and Xie, Zhuohan and Yuan, Ye and Almheiri, Saeed and Alnajjar, Abdulrazzaq and Chen, Mingbin and Stuart, Harry and Thompson, Paul and Tiwari, Prayag and Lopez-Lira, Alejandro and Liu, Xue and Huang, Jimin and Ananiadou, Sophia},
+  booktitle = {Findings of the Association for Computational Linguistics: ACL 2026},
+  year      = {2026},
+  pages     = {9838--9864},
+  publisher = {Association for Computational Linguistics},
+  abbr      = {ACL},
+  additional_info = {. <strong>Findings</strong>},
+  domain    = {trust},
+  arxiv     = {2601.05403},
+  pdf       = {https://arxiv.org/pdf/2601.05403},
+  code      = {https://github.com/lzw108/FMD},
+  tldr      = {MFMDScen tests 22 LLMs on financial misinformation in English, Chinese, Greek and Bengali under role, region, ethnicity and religion scenarios; the same claim gets different verdicts depending on who the model is told it is.},
+  abstract  = {Large language models (LLMs) have been widely applied across various domains of finance. Since their training data are largely derived from human-authored corpora, LLMs may inherit a range of human biases. Behavioral biases can lead to instability and uncertainty in decision-making, particularly when processing financial information. However, existing research on LLM bias has mainly focused on direct questioning or simplified, general-purpose settings, with limited consideration of the complex real-world financial environments and high-risk, context-sensitive, multilingual financial misinformation detection tasks (MFMD). In this work, we propose MFMDScen, a comprehensive benchmark for evaluating behavioral biases of LLMs in MFMD across diverse economic scenarios. In collaboration with financial experts, we construct three types of complex financial scenarios: (i) role- and personality-based, (ii) role- and region-based, and (iii) role-based scenarios incorporating ethnicity and religious beliefs. We further develop a multilingual financial misinformation dataset covering English, Chinese, Greek, and Bengali. By integrating these scenarios with misinformation claims, MFMDScen enables a systematic evaluation of 22 mainstream LLMs. Our findings reveal that pronounced behavioral biases persist across both commercial and open-source models.},
+  bibtex_show = {true}
+}
+
+@article{giannouris2026janus,
+  title     = {{Janus}: A Benchmark for Goal-Conditioned Information Distortion in {LLMs}},
+  author    = {Giannouris, Polydoros and Kabir, Mohsinul and Ananiadou, Sophia},
+  journal   = {arXiv preprint arXiv:2606.10852},
+  year      = {2026},
+  month     = {jun},
+  doi       = {10.48550/arXiv.2606.10852},
+  abbr      = {arXiv},
+  domain    = {trust},
+  arxiv     = {2606.10852},
+  pdf       = {https://arxiv.org/pdf/2606.10852},
+  code      = {https://github.com/PolydorosG/Janus},
+  tldr      = {LLMs can mislead without lying: given a fixed pool of true facts and a persuasive goal, 12 models consistently omit, soften or spin adverse evidence across 160 scenarios in 8 domains.},
+  abstract  = {LLM deception is often evaluated through direct markers such as fabricated claims, explicit lies, or strategic concealment. However, many real-world misleading communications do not depend on false statements, rather, they arise from selective treatment of true material facts: omitting adverse evidence, softening unfavorable details, emphasizing favorable details, or replacing precise qualifications with vague language. Existing benchmarks largely miss this subtler and arguably more dangerous failure mode. We introduce JANUS, a benchmark for measuring goal-conditioned pragmatic distortion in fact-grounded LLM outputs. Each scenario in our benchmark provides a fixed pool of favorable and adverse facts and compares a neutral condition against a goal-directed condition, such as increasing adoption, enrollment, approval, or support, despite potential harm to directly affected individuals or groups. Because all outputs are constrained to use the same fact pool, JANUS isolates misleading net impressions from hallucination and fabrication. JANUS contains 160 scenarios across 8 domains, with each scenario paired with neutral and goal-conditioned prompts and annotated material facts. Extensive experiments across 12 LLMs reveal consistent goal-conditioned distortions, demonstrating that current models remain sensitive to incentive and framing objectives and lack robust safeguards against selectively misleading communication. We publicly release our corpus and code for future research.},
+  bibtex_show = {true}
+}
+
+@inproceedings{kabir2025ngram,
+  title     = {From n-gram to Attention: How Model Architectures Learn and Propagate Bias in Language Modeling},
+  author    = {Kabir, Mohsinul and Tahsin, Tasfia and Ananiadou, Sophia},
+  booktitle = {Findings of the Association for Computational Linguistics: EMNLP 2025},
+  year      = {2025},
+  month     = {nov},
+  pages     = {18478--18498},
+  publisher = {Association for Computational Linguistics},
+  doi       = {10.18653/v1/2025.findings-emnlp.1003},
+  url       = {https://aclanthology.org/2025.findings-emnlp.1003/},
+  abbr      = {EMNLP},
+  additional_info = {. <strong>Findings</strong>},
+  domain    = {trust},
+  arxiv     = {2505.12381},
+  html      = {https://aclanthology.org/2025.findings-emnlp.1003/},
+  pdf       = {https://aclanthology.org/2025.findings-emnlp.1003.pdf},
+  tldr      = {Traces bias to its origins in both data and architecture: n-gram LMs are highly sensitive to context size while transformers are more robust, the temporal provenance of training data matters, and some biases (e.g. sexual orientation) are disproportionately amplified.},
+  abstract  = {Current research on bias in language models (LMs) predominantly focuses on data quality, with significantly less attention paid to model architecture and temporal influences of data. Even more critically, few studies systematically investigate the origins of bias. We propose a methodology grounded in comparative behavioral theory to interpret the complex interaction between training data and model architecture in bias propagation during language modeling. Building on recent work that relates transformers to n-gram LMs, we evaluate how data, model design choices, and temporal dynamics affect bias propagation. Our findings reveal that: (1) n-gram LMs are highly sensitive to context window size in bias propagation, while transformers demonstrate architectural robustness; (2) the temporal provenance of training data significantly affects bias; and (3) different model architectures respond differentially to controlled bias injection, with certain biases (e.g. sexual orientation) being disproportionately amplified. As language models become ubiquitous, our findings highlight the need for a holistic approach, tracing bias to its origins across both data and model dimensions, not just symptoms, to mitigate harm.},
+  bibtex_show = {true},
+  selected  = {true}
+}
 
 @article{abrar2025religious,
-  author = {Abrar, Ajwad and Oeshy, Nafisa Tabassum and Kabir, Mohsinul and Ananiadou, Sophia},
-  journal = {AI \& SOCIETY},
-  year = {2025},
-  month = {nov},
-  note = {Published online},
+  title     = {Religious Bias Landscape in Language and Text-to-Image Models: Analysis, Detection, and Debiasing Strategies},
+  author    = {Abrar, Ajwad and Oeshy, Nafisa Tabassum and Kabir, Mohsinul and Ananiadou, Sophia},
+  journal   = {AI \& Society},
+  volume    = {41},
+  pages     = {2915--2941},
+  year      = {2025},
+  month     = {oct},
   publisher = {Springer},
-  title = {Religious Bias Landscape in Language and Text-to-Image Models: Analysis, Detection, and Debiasing Strategies},
-  doi = {10.1007/s00146-025-02721-z},
-  pdf = {https://arxiv.org/pdf/2501.08441},
-  preview = {ai_society.jpg},
+  doi       = {10.1007/s00146-025-02721-z},
+  abbr      = {AI\&Soc},
+  domain    = {trust},
+  arxiv     = {2501.08441},
+  html      = {https://link.springer.com/article/10.1007/s00146-025-02721-z},
+  pdf       = {https://arxiv.org/pdf/2501.08441},
+  tldr      = {Around 400 naturally occurring prompts reveal disproportionate religious stereotypes in both language and text-to-image models, including intersections with gender, age and nationality; corrective prompting only partly mitigates them.},
+  abstract  = {The widespread adoption of language models highlights the need for critical examinations of their inherent biases, particularly concerning religion. This study systematically investigates religious bias in both language models and text-to-image generation models, analyzing both open-source and closed-source systems. We construct approximately 400 unique, naturally occurring prompts to probe language models for religious bias across diverse tasks, including mask filling, prompt completion, and image generation. Our experiments reveal concerning instances of underlying stereotypes and biases associated disproportionately with certain religions. Additionally, we explore cross-domain biases, examining how religious bias intersects with demographic factors such as gender, age, and nationality. This study further evaluates the effectiveness of targeted debiasing techniques by employing corrective prompts designed to mitigate the identified biases. Our findings demonstrate that language models continue to exhibit significant biases in both text and image generation tasks, emphasizing the urgent need to develop fairer language models to achieve global acceptability.},
   bibtex_show = {true},
-  abbr = {NLP},
-  selected = {true}
-}
-
-@article{kabir2025semantic,
-  author = {Kabir, Mohsinul and Ahmed, Tasnim and Rahman, Md Mezbaur and Giannouris, Polydoros and Ananiadou, Sophia},
-  journal = {arXiv},
-  year = {2025},
-  month = {oct},
-  note = {https://arxiv.org/abs/2510.25967},
-  publisher = {},
-  title = {Semantic Label Drift in Cross-Cultural Translation},
-  doi = {10.48550/arXiv.2510.25967},
-  pdf = {https://arxiv.org/pdf/2510.25967},
-  preview = {arxiv.jpg},
-  bibtex_show = {true},
-  abbr = {NLP},
-  selected = {true}
-}
-
-@article{kabir2023deptweet,
-  author = {Kabir, Mohsinul and Ahmed, Tasnim and Hasan, Md Bakhtiar and Laskar, Md Tahmid Rahman and Joarder, Tarun Kumar and Mahmud, Hasan and Hasan, Kamrul},
-  journal = {Computers in Human Behavior},
-  year = {2023},
-  month = {feb},
-  note = {Volume 139},
-  publisher = {Elsevier},
-  title = {{DEPTWEET}: A Typology for Social Media Texts to Detect Depression Severities},
-  doi = {10.1016/j.chb.2022.107503},
-  pdf = {https://arxiv.org/pdf/2210.05372},
-  preview = {elsevier.png},
-  bibtex_show = {true},
-  abbr = {NLP},
-  selected = {},
-  volume = {139},
-  pages = {107503}
-}
-
-@inproceedings{kabir2024benllm,
-  author = {Kabir, Mohsinul and Islam, Mohammed Saidul and Laskar, Md Tahmid Rahman and Nayeem, Mir Tafseer and Bari, M Saiful and Hoque, Enamul},
-  booktitle = {Proceedings of the 2024 Joint International Conference on Computational Linguistics, Language Resources and Evaluation (LREC-COLING 2024)},
-  year = {2024},
-  month = {may},
-  note = {Torino, Italia},
-  publisher = {ELRA and ICCL},
-  title = {{BenLLM-Eval}: A Comprehensive Evaluation into the Potentials and Pitfalls of Large Language Models on {Bengali} {NLP}},
-  doi = {},
-  pdf = {https://aclanthology.org/2024.lrec-main.201.pdf},
-  preview = {acl_logo.png},
-  bibtex_show = {true},
-  abbr = {NLP},
-  selected = {},
-  pages = {2238--2252}
-}
-
-@article{kabir2025benchmark,
-  author = {Sakib, E Ebtida and Akib, A and Mazumder, M Muktadir and Raida, M Noushin and Kabir, M},
-  journal = {arXiv e-prints, arXiv:2510.18096},
-  year = {2025},
-  month = {oct},
-  note = {https://arxiv.org/abs/2510.18096},
-  publisher = {},
-  title = {A Benchmark Dataset and {LLMs} Comparison for {NFR} Classification with Explainable {AI}},
-  doi = {10.48550/arXiv.2510.18096},
-  pdf = {https://arxiv.org/pdf/2510.18096},
-  preview = {arxiv.jpg},
-  bibtex_show = {true},
-  abbr = {SE},
-  selected = {}
-}
-
-
-
-@article{shams2025asteroid,
-  author = {Shams, FA and Nafiz, AAM and Mohosheu, MS and Hoque, MM and Abir, SR and Ratul, RH and others},
-  journal = {Experimental Astronomy},
-  year = {2025},
-  month = {feb},
-  note = {},
-  publisher = {Springer},
-  title = {Asteroid Family Classification with Machine Learning: Investigative Analysis of a Novel Two-Step Approach for Categorizing Known Small Asteroid Families},
-  doi = {10.1007/s10686-025-09982-y},
-  pdf = {},
-  preview = {exp_astr.webp},
-  bibtex_show = {true},
-  abbr = {ML},
-  selected = {},
-  volume = {59},
-  number = {1},
-  pages = {11}
-}
-
-@article{sakib2025recipe,
-  author = {Sakib, N and Shahariar, GM and Kabir, MM and Hasan, MK and Mahmud, H},
-  journal = {PloS one},
-  year = {2025},
-  month = {jan},
-  note = {},
-  publisher = {Public Library of Science},
-  title = {Towards Automated Recipe Genre Classification Using Semi-Supervised Learning},
-  doi = {10.1371/journal.pone.0317697},
-  pdf = {https://arxiv.org/pdf/2310.15693},
-  preview = {plos.png},
-  bibtex_show = {true},
-  abbr = {ML},
-  selected = {},
-  volume = {20},
-  number = {1},
-  pages = {e0317697}
+  selected  = {true}
 }
 
 @inproceedings{liu2025finnlp,
-  author = {Liu, Z and Wang, K and Bao, Z and Zhang, X and Dong, J and Yang, K and Kabir, M and Giannouris, P and others},
-  booktitle = {Proceedings of the Joint Workshop of the 9th Financial Technology and Natural Language Processing Conference},
-  year = {2025},
-  month = {jan},
-  note = {https://aclanthology.org/2025.finnlp-1.30/},
+  title     = {{FinNLP-FNP-LLMFinLegal-2025} Shared Task: Financial Misinformation Detection Challenge Task},
+  author    = {Liu, Zhiwei and Wang, Keyi and Bao, Zhuo and Zhang, Xin and Dong, Jiping and Yang, Kailai and Kabir, Mohsinul and Giannouris, Polydoros and Xing, Rui and Park, Seongchan and Kim, Jaehong and Li, Dong and Xie, Qianqian and Ananiadou, Sophia},
+  booktitle = {Proceedings of the Joint Workshop of the 9th FinNLP, the 6th FNP, and the 1st LLMFinLegal (co-located with COLING 2025)},
+  year      = {2025},
+  month     = {jan},
+  pages     = {271--276},
   publisher = {Association for Computational Linguistics},
-  title = {{FinNLP-FNP-LLMFinLegal-2025} Shared Task: Financial Misinformation Detection Challenge Task},
-  doi = {},
-  pdf = {https://aclanthology.org/2025.finnlp-1.30.pdf},
-  preview = {acl_logo.png},
-  bibtex_show = {true},
-  abbr = {NLP},
-  selected = {}
+  url       = {https://aclanthology.org/2025.finnlp-1.30/},
+  abbr      = {COLING-W},
+  domain    = {trust},
+  html      = {https://aclanthology.org/2025.finnlp-1.30/},
+  pdf       = {https://aclanthology.org/2025.finnlp-1.30.pdf},
+  tldr      = {Overview of the FMD Challenge, one of the first shared tasks asking LLMs to verify financial claims and explain their verdicts; summarises the dataset, participating systems and lessons learned.},
+  abstract  = {Despite the promise of large language models (LLMs) in finance, their capabilities for financial misinformation detection (FMD) remain largely unexplored. To evaluate the capabilities of LLMs in FMD task, we introduce the financial misinformation detection shared task featured at COLING FinNLP-FNP-LLMFinLegal-2024, FMD Challenge. This challenge aims to evaluate the ability of LLMs to verify financial misinformation while generating plausible explanations. In this paper, we provide an overview of this task and dataset, summarize participants' methods, and present their experimental evaluations, highlighting the effectiveness of LLMs in addressing the FMD task. To the best of our knowledge, the FMD Challenge is one of the first challenges for assessing LLMs in the field of FMD. Therefore, we provide detailed observations and draw conclusions for the future development of this field.},
+  bibtex_show = {true}
 }
 
-@article{tariquzzaman2024bda,
-  author = {Tariquzzaman, M and Anam, AN and Haque, N and Kabir, M and Mahmud, H and Hasan, MK},
-  journal = {arXiv preprint arXiv:2412.08753},
-  year = {2024},
-  month = {dec},
-  note = {https://arxiv.org/abs/2412.08753},
-  publisher = {},
-  title = {{BDA}: {Bangla} Text Data Augmentation Framework},
-  doi = {10.48550/arXiv.2412.08753},
-  pdf = {https://arxiv.org/pdf/2412.08753},
-  preview = {arxiv.jpg},
-  bibtex_show = {true},
-  abbr = {NLP},
-  selected = {}
-}
+
+% -----------------------------------------------------------------------------
+% Mental Health & Online Harms
+% -----------------------------------------------------------------------------
 
 @inproceedings{kabir2024depression,
-  author = {Kabir, M and Kader, FB and Nujat, NH and Sogir, TB and Shams, FA and Mahmud, H and Hasan, K},
-  booktitle = {International Conference on Applications of Natural Language to Information Systems},
-  year = {2024},
-  month = {},
-  note = {},
+  title     = {Unveiling Depression on Social Media: Active Learning with Human-in-the-Loop Labeling for Mental Health Data Annotation and Analysis},
+  author    = {Kabir, Mohsinul and Kader, Faria Binte and Nujat, Nafisa Hossain and Sogir, Tasmia Binte and Shams, Fatin Abrar and Mahmud, Hasan and Hasan, Md Kamrul},
+  booktitle = {Natural Language Processing and Information Systems (NLDB 2024)},
+  series    = {Lecture Notes in Computer Science},
+  year      = {2024},
+  pages     = {78--92},
   publisher = {Springer},
-  title = {Unveiling Depression on Social Media: Active Learning with Human-in-the-Loop Labeling for Mental Health Data Annotation and Analysis},
-  doi = {10.1007/978-3-031-70239-6_6},
-  pdf = {https://link.springer.com/content/pdf/10.1007/978-3-031-70239-6_6.pdf},
-  preview = {nldb.png},
-  bibtex_show = {true},
-  abbr = {NLP},
-  selected = {}
+  doi       = {10.1007/978-3-031-70239-6_6},
+  abbr      = {NLDB},
+  domain    = {mental-health},
+  html      = {https://link.springer.com/chapter/10.1007/978-3-031-70239-6_6},
+  code      = {https://github.com/mohsinulkabir14/wmhd},
+  tldr      = {Uses active learning with uncertainty sampling to cheaply annotate #WorldMentalHealthDay tweets, releasing 3,659 expert-validated samples (22\% showing depressive symptoms) and a linguistic analysis of depressed vs. non-depressed users.},
+  abstract  = {Progress in mental health research remains constrained by the accessibility of adequate, high-quality data. Annotating mental health data requires a lot of resources and expert monitoring. In this study, we explore the utility of active learning with Human-in-the-Loop labeling approach to reduce the annotation task for identifying signs of depression in people's social media posts. The data for this study was collected from the \#WorldMentalHealthDay trend on Twitter, which is a popular mental health campaign to raise awareness of mental illness across the global population. From the pool of unlabeled data, we initially labeled a small portion of data to train an LSTM model with GloVe embedding; thereafter, the entire pool was labeled using uncertainty sampling, labeling the least confident data in each cycle. Along with the methodology, we present a high-quality dataset of 3659 samples, with a notable proportion of 22\% of tweets indicating symptoms of depression. We also analyze the language usage of depressed and non-depressed individuals on social media by dissecting the semantic structure of tweets. The quality of the dataset was validated by establishing strong baseline results with state-of-the-art models and word-embedding techniques.},
+  bibtex_show = {true}
 }
 
-
-@article{kabir2024islamic,
-  author = {Mohsinul Kabir and Mohammad Ridwan Kabir and Riasat Islam},
-  title = {Islamic Lifestyle Applications: Meeting the Spiritual Needs of Modern Muslims},
-  journal = {International Journal of Human–Computer Interaction},
-  volume = {0},
-  number = {0},
-  pages = {1--29},
-  year = {2025},
-  publisher = {Taylor \& Francis},
-  doi = {10.1080/10447318.2025.2595545},
-  URL = {https://doi.org/10.1080/10447318.2025.2595545},
-  pdf = {https://www.tandfonline.com/doi/epdf/10.1080/10447318.2025.2595545?needAccess=true},
-  preview = {ijhci.jpeg},
+@article{kabir2023deptweet,
+  title     = {{DEPTWEET}: A Typology for Social Media Texts to Detect Depression Severities},
+  author    = {Kabir, Mohsinul and Ahmed, Tasnim and Hasan, Md Bakhtiar and Laskar, Md Tahmid Rahman and Joarder, Tarun Kumar and Mahmud, Hasan and Hasan, Kamrul},
+  journal   = {Computers in Human Behavior},
+  volume    = {139},
+  pages     = {107503},
+  year      = {2023},
+  month     = {feb},
+  publisher = {Elsevier},
+  doi       = {10.1016/j.chb.2022.107503},
+  abbr      = {CHB},
+  domain    = {mental-health},
+  arxiv     = {2210.05372},
+  pdf       = {https://arxiv.org/pdf/2210.05372},
+  code      = {https://github.com/mohsinulkabir14/DEPTWEET},
+  tldr      = {A clinically grounded typology (following DSM-5 and PHQ-9) and a 40,191-tweet expert-annotated dataset for detecting depression and its severity (mild, moderate, severe) on social media.},
+  abstract  = {Mental health research through data-driven methods has been hindered by a lack of standard typology and scarcity of adequate data. In this study, we leverage the clinical articulation of depression to build a typology for social media texts for detecting the severity of depression. It emulates the standard clinical assessment procedure Diagnostic and Statistical Manual of Mental Disorders (DSM-5) and Patient Health Questionnaire (PHQ-9) to encompass subtle indications of depressive disorders from tweets. Along with the typology, we present a new dataset of 40191 tweets labeled by expert annotators. Each tweet is labeled as 'non-depressed' or 'depressed'. Moreover, three severity levels are considered for 'depressed' tweets: (1) mild, (2) moderate, and (3) severe. An associated confidence score is provided with each label to validate the quality of annotation. We examine the quality of the dataset via representing summary statistics while setting strong baseline results using attention-based models like BERT and DistilBERT. Finally, we extensively address the limitations of the study to provide directions for further research.},
   bibtex_show = {true},
-  abbr = {HCI}
+  selected  = {true}
 }
 
-
-@inproceedings{tariquzzaman2023linguists,
-  author = {Tariquzzaman, M and Kader, MW and Anam, A and Haque, N and Kabir, M and Mahmud, H and others},
-  booktitle = {Proceedings of the First Workshop on Bangla Language Processing (BLP-2023)},
-  year = {2023},
-  month = {aug},
-  note = {https://aclanthology.org/2023.banglalp-1.26/},
-  publisher = {Association for Computational Linguistics},
-  title = {the\_linguists at {BLP-2023} Task 1: A Novel Informal {Bangla} {Fasttext} Embedding for Violence Inciting Text Detection},
-  doi = {10.18653/v1/2023.banglalp-1.26},
-  pdf = {https://aclanthology.org/2023.banglalp-1.26.pdf},
-  preview = {acl_logo.png},
-  bibtex_show = {true},
-  abbr = {NLP},
-  selected = {}
-}
-
-@inproceedings{raiyan2023math,
-  author = {Raiyan, SR and Faiyaz, MN and Kabir, SMJ and Kabir, M and Mahmud, H and Hasan, MK},
-  booktitle = {Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics (Volume 4: ACL Student Research Workshop)},
-  year = {2023},
-  month = {jul},
-  note = {Toronto, Canada},
-  publisher = {Association for Computational Linguistics},
-  title = {Math Word Problem Solving by Generating Linguistic Variants of Problem Statements},
-  doi = {10.18653/v1/2023.acl-srw.49},
-  pdf = {https://aclanthology.org/2023.acl-srw.49.pdf},
-  preview = {acl_logo.png},
-  bibtex_show = {true},
-  abbr = {NLP},
-  selected = {},
-  pages = {5530--5543}
-}
-
-@inproceedings{kader2023emojis,
-  author = {Kader, FB and Nujat, NH and Sogir, TB and Kabir, M and Mahmud, H and Hasan, MK},
-  booktitle = {Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics (Volume 4: ACL Student Research Workshop)},
-  year = {2023},
-  month = {jul},
-  note = {Toronto, Canada},
-  publisher = {Association for Computational Linguistics},
-  title = {When Words Fail, Emojis Prevail: A Novel Architecture for Generating Sarcastic Sentences with Emoji Using Valence Reversal and Semantic Incongruity},
-  doi = {10.18653/v1/2023.acl-srw.47},
-  pdf = {https://aclanthology.org/2023.acl-srw.47.pdf},
-  preview = {acl_logo.png},
-  bibtex_show = {true},
-  abbr = {NLP},
-  selected = {}
-}
-
-@inproceedings{banglabook2023,
-  author = {Kabir, Mohsinul and Mahfuz, Obayed Bin and Raiyan, Syed Rifat and Mahmud, Hasan and Hasan, Md Kamrul},
-  booktitle = {Findings of the Association for Computational Linguistics: ACL 2023},
-  year = {2023},
-  month = {jul},
-  note = {Toronto, Canada},
-  publisher = {Association for Computational Linguistics},
-  title = {{BanglaBook}: A Large-scale {Bangla} Dataset for Sentiment Analysis from Book Reviews},
-  doi = {10.18653/v1/2023.findings-acl.80},
-  pdf = {https://aclanthology.org/2023.findings-acl.80.pdf},
-  preview = {acl_logo.png},
-  bibtex_show = {true},
-  abbr = {NLP},
-  selected = {},
-  pages = {1000--1008}
-}
-
-@article{ahmed2022performance,
-  author = {Ahmed, T and Ivan, S and Kabir, M and Mahmud, H and Hasan, K},
-  journal = {Social Network Analysis and Mining},
-  year = {2022},
-  month = {may},
-  note = {},
+@article{ahmed2022cyberbullying,
+  title     = {Performance Analysis of Transformer-Based Architectures and Their Ensembles to Detect Trait-Based Cyberbullying},
+  author    = {Ahmed, Tasnim and Ivan, Shahriar and Kabir, Mohsinul and Mahmud, Hasan and Hasan, Kamrul},
+  journal   = {Social Network Analysis and Mining},
+  volume    = {12},
+  number    = {1},
+  pages     = {99},
+  year      = {2022},
+  month     = {aug},
   publisher = {Springer},
-  title = {Performance Analysis of Transformer-Based Architectures and Their Ensembles to Detect Trait-Based Cyberbullying},
-  doi = {10.1007/s13278-022-00892-x},
-  pdf = {https://link.springer.com/article/10.1007/s13278-022-00934-4},
-  preview = {snam.jpg},
-  bibtex_show = {true},
-  abbr = {NLP},
-  selected = {},
-  volume = {12},
-  number = {1},
-  pages = {99}
-}
-
-@inproceedings{sakib2022cooking,
-  author = {Sakib, N and Shahariar, GM and Kabir, MM and Hasan, MK and Mahmud, H},
-  booktitle = {International Conference on Machine Intelligence and Emerging Technologies},
-  year = {2022},
-  month = {},
-  note = {https://link.springer.com/chapter/10.1007/978-3-031-34622-4_15},
-  publisher = {Springer},
-  title = {Assorted, Archetypal and Annotated Two Million {(3A2M)} Cooking Recipes Dataset Based on Active Learning},
-  doi = {10.1007/978-3-031-34622-4_15},
-  pdf = {https://link.springer.com/chapter/10.1007/978-3-031-34622-4_15},
-  preview = {miet.webp},
-  bibtex_show = {true},
-  abbr = {ML},
-  selected = {}
-}
-
-@article{kader2022sarcasm,
-  author = {Kader, FB and Nujat, NH and Sogir, TB and Kabir, M and Mahmud, H and Hasan, K},
-  journal = {arXiv preprint arXiv:2209.06170},
-  year = {2022},
-  month = {sep},
-  note = {https://arxiv.org/abs/2209.06170},
-  publisher = {},
-  title = {Computational Sarcasm Analysis on Social Media: A Systematic Review},
-  doi = {10.48550/arXiv.2209.06170},
-  pdf = {https://arxiv.org/pdf/2209.06170},
-  preview = {arxiv.jpg},
-  bibtex_show = {true},
-  abbr = {NLP},
-  selected = {}
+  doi       = {10.1007/s13278-022-00934-4},
+  abbr      = {SNAM},
+  domain    = {mental-health},
+  html      = {https://link.springer.com/article/10.1007/s13278-022-00934-4},
+  code      = {https://github.com/tasnim7ahmed/Extended-Cyberbullying-Detection},
+  tldr      = {A systematic comparison of transformer models for trait-based cyberbullying detection on Twitter, plus an ensemble that reaches an average F1 of 95.9\% on balanced and 87.5\% on imbalanced data.},
+  abstract  = {The influence of social media is one of the most dominating characteristics of the current era, and this has led cyberbullying to grow into a more serious social issue. As a result, automated cyberbullying detection systems need to be an integral part of almost all social media platforms. Past studies on this domain have primarily focused on hand-picked features and traditional machine learning approaches for cyberbullying detection from user comments on social media. Recently, transformers have been proved to be quite effective in various language-related tasks; however, their effectiveness has not been extensively explored in this particular domain. In this study, we evaluate the individual performance of several well-known transformer-based architectures and aim to contribute to the development of automated cyberbullying detection systems by proposing our own transformer-based ensemble framework. Our proposed framework is evaluated on a balanced and an imbalanced dataset, both of which are constructed from a large collection of Twitter comments and are publicly available. Our proposed architecture outperforms all the baseline models, as well the individual standalone classifier networks that are used in our ensemble, obtaining an average F1-score of 95.92\% on the balanced dataset and an average F1-score of 87.51\% on the imbalanced dataset. We further investigate the cases where our proposed architecture misclassifies samples from both datasets, preventing it from achieving a perfect score.},
+  bibtex_show = {true}
 }
 
 @inproceedings{ahmed2021bullying,
-  author = {Ahmed, T and Kabir, M and Ivan, S and Mahmud, H and Hasan, K},
+  title     = {Am {I} Being Bullied on Social Media? An Ensemble Approach to Categorize Cyberbullying},
+  author    = {Ahmed, Tasnim and Kabir, Mohsinul and Ivan, Shahriar and Mahmud, Hasan and Hasan, Kamrul},
   booktitle = {2021 IEEE International Conference on Big Data (Big Data)},
-  year = {2021},
-  month = {},
-  note = {},
+  year      = {2021},
+  month     = {dec},
+  pages     = {2442--2453},
   publisher = {IEEE},
-  title = {Am {I} Being Bullied on Social Media? An Ensemble Approach to Categorize Cyberbullying},
-  doi = {10.1109/BigData52589.2021.9671594},
-  pdf = {https://www.researchgate.net/profile/Hasan-Mahmud-6/publication/357824703_Am_I_Being_Bullied_on_Social_Media_An_Ensemble_Approach_to_Categorize_Cyberbullying/links/68597945cdf1a35eb174c84f/Am-I-Being-Bullied-on-Social-Media-An-Ensemble-Approach-to-Categorize-Cyberbullying.pdf},
-  preview = {big_data.jpg},
-  bibtex_show = {true},
-  abbr = {ML},
-  selected = {}
+  doi       = {10.1109/BigData52589.2021.9671594},
+  abbr      = {IEEE BigData},
+  domain    = {mental-health},
+  html      = {https://ieeexplore.ieee.org/document/9671594},
+  tldr      = {A neural ensemble of attention-based transformers that categorises cyberbullying by trait (e.g. age, ethnicity, gender, religion), reaching 95.6\% F1 on five classes of the Fine-Grained Cyberbullying Dataset.},
+  abstract  = {People can easily reveal their aggressive remarks on social media platforms using the anonymity it provides. During the COVID-19 pandemic, the usage of social media has been increased several times according to surveys and people are vulnerable to cyber attacks now more than ever. Prevention of cyberbullying needs careful monitoring and identification. Most of the existing works on cyberbullying detection employed traditional machine learning classifiers with handcrafted features, and deep learning-based models have made their way in this domain very recently. Categorizing cyberbullying based on traits is a complex task and needs contextual consideration. In this work, we have proposed a new approach to detect cyberbullying on social media platforms using a neural ensemble method of transformer-based architectures with attention mechanism. Our proposed architecture is trained on one balanced and one imbalanced dataset and outperforms the given ML and DNN baselines by a significant margin in both cases. We achieved an average F1-score of 95.59\% for five classes and 90.65\% for six classes on the Fine-Grained Cyberbullying Dataset (FGCD), and 87.28\% on Twitter parsed dataset. Our in-depth results provide great insights into the effectiveness of transformer-based models in cyberbullying detection and paves the way for future researches to combat this serious online issue.},
+  bibtex_show = {true}
+}
+
+
+% -----------------------------------------------------------------------------
+% Sarcasm & Figurative Language
+% -----------------------------------------------------------------------------
+
+@inproceedings{kader2023emojis,
+  title     = {``When Words Fail, Emojis Prevail'': A Novel Architecture for Generating Sarcastic Sentences With Emoji Using Valence Reversal and Semantic Incongruity},
+  author    = {Kader, Faria Binte and Nujat, Nafisa Hossain and Sogir, Tasmia Binte and Kabir, Mohsinul and Mahmud, Hasan and Hasan, Kamrul},
+  booktitle = {Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics (Volume 4: Student Research Workshop)},
+  year      = {2023},
+  month     = {jul},
+  pages     = {334--351},
+  publisher = {Association for Computational Linguistics},
+  doi       = {10.18653/v1/2023.acl-srw.47},
+  url       = {https://aclanthology.org/2023.acl-srw.47/},
+  abbr      = {ACL SRW},
+  domain    = {figurative},
+  arxiv     = {2305.04105},
+  html      = {https://aclanthology.org/2023.acl-srw.47/},
+  pdf       = {https://aclanthology.org/2023.acl-srw.47.pdf},
+  tldr      = {Turns a non-sarcastic sentence into a sarcastic one by combining valence reversal with commonsense-based semantic incongruity, then adds emojis that carry the missing emotional cue.},
+  abstract  = {Sarcasm is a form of figurative language that serves as a humorous tool for mockery and ridicule. We present a novel architecture for sarcasm generation with emoji from a non-sarcastic input sentence in English. We divide the generation task into two sub tasks: one for generating textual sarcasm and another for collecting emojis associated with those sarcastic sentences. Two key elements of sarcasm are incorporated into the textual sarcasm generation task: valence reversal and semantic incongruity with context, where the context may involve shared commonsense or general knowledge between the speaker and their audience. The majority of existing sarcasm generation works have focused on this textual form. However, in the real world, when written texts fall short of effectively capturing the emotional cues of spoken and face-to-face communication, people often opt for emojis to accurately express their emotions. Due to the wide range of applications of emojis, incorporating appropriate emojis to generate textual sarcastic sentences helps advance sarcasm generation. We conclude our study by evaluating the generated sarcastic sentences using human judgement.},
+  bibtex_show = {true}
+}
+
+@article{kader2022sarcasm,
+  title     = {Computational Sarcasm Analysis on Social Media: A Systematic Review},
+  author    = {Kader, Faria Binte and Nujat, Nafisa Hossain and Sogir, Tasmia Binte and Kabir, Mohsinul and Mahmud, Hasan and Hasan, Kamrul},
+  journal   = {arXiv preprint arXiv:2209.06170},
+  year      = {2022},
+  month     = {sep},
+  doi       = {10.48550/arXiv.2209.06170},
+  abbr      = {arXiv},
+  domain    = {figurative},
+  arxiv     = {2209.06170},
+  pdf       = {https://arxiv.org/pdf/2209.06170},
+  tldr      = {A survey of English computational sarcasm research, covering datasets, features, methods (including multimodal and context-aware transformers) and open tasks beyond detection.},
+  abstract  = {Sarcasm can be defined as saying or writing the opposite of what one truly wants to express, usually to insult, irritate, or amuse someone. Because of the obscure nature of sarcasm in textual data, detecting it is difficult and of great interest to the sentiment analysis research community. Though the research in sarcasm detection spans more than a decade, some significant advancements have been made recently, including employing unsupervised pre-trained transformers in multimodal environments and integrating context to identify sarcasm. In this study, we aim to provide a brief overview of recent advancements and trends in computational sarcasm research for the English language. We describe relevant datasets, methodologies, trends, issues, challenges, and tasks relating to sarcasm that are beyond detection. Our study provides well-summarized tables of sarcasm datasets, sarcastic features and their extraction methods, and performance analysis of various approaches which can help researchers in related domains understand current state-of-the-art practices in sarcasm detection.},
+  bibtex_show = {true}
+}
+
+
+% -----------------------------------------------------------------------------
+% Bangla & Low-Resource NLP
+% -----------------------------------------------------------------------------
+
+@inproceedings{kabir2024benllm,
+  title     = {{BenLLM-Eval}: A Comprehensive Evaluation into the Potentials and Pitfalls of Large Language Models on {Bengali} {NLP}},
+  author    = {Kabir, Mohsinul and Islam, Mohammed Saidul and Laskar, Md Tahmid Rahman and Nayeem, Mir Tafseer and Bari, M Saiful and Hoque, Enamul},
+  booktitle = {Proceedings of the 2024 Joint International Conference on Computational Linguistics, Language Resources and Evaluation (LREC-COLING 2024)},
+  year      = {2024},
+  month     = {may},
+  pages     = {2238--2252},
+  publisher = {ELRA and ICCL},
+  address   = {Torino, Italia},
+  url       = {https://aclanthology.org/2024.lrec-main.201/},
+  abbr      = {LREC-COLING},
+  annotation = {Mohsinul Kabir and Mohammed Saidul Islam contributed equally.},
+  domain    = {bangla},
+  arxiv     = {2309.13173},
+  html      = {https://aclanthology.org/2024.lrec-main.201/},
+  pdf       = {https://aclanthology.org/2024.lrec-main.201.pdf},
+  tldr      = {Zero-shot evaluation of GPT-3.5, LLaMA-2 and Claude-2 on seven Bengali NLP tasks: LLMs occasionally match fine-tuned SOTA but mostly fall short, with open-source models lagging badly.},
+  abstract  = {Large Language Models (LLMs) have emerged as one of the most important breakthroughs in NLP for their impressive skills in language generation and other language-specific tasks. Though LLMs have been evaluated in various tasks, mostly in English, they have not yet undergone thorough evaluation in under-resourced languages such as Bengali (Bangla). To this end, this paper introduces BenLLM-Eval, which consists of a comprehensive evaluation of LLMs to benchmark their performance in the Bengali language that has modest resources. In this regard, we select various important and diverse Bengali NLP tasks, such as text summarization, question answering, paraphrasing, natural language inference, transliteration, text classification, and sentiment analysis for zero-shot evaluation of popular LLMs, namely, GPT-3.5, LLaMA-2-13b-chat, and Claude-2. Our experimental results demonstrate that while in some Bengali NLP tasks, zero-shot LLMs could achieve performance on par, or even better than current SOTA fine-tuned models; in most tasks, their performance is quite poor (with the performance of open-source LLMs like LLaMA-2-13b-chat being significantly bad) in comparison to the current SOTA results. Therefore, it calls for further efforts to develop a better understanding of LLMs in modest-resourced languages like Bengali.},
+  bibtex_show = {true}
+}
+
+@article{tariquzzaman2024bda,
+  title     = {{BDA}: {Bangla} Text Data Augmentation Framework},
+  author    = {Tariquzzaman, Md. and Anam, Audwit Nafi and Haque, Naimul and Kabir, Mohsinul and Mahmud, Hasan and Hasan, Md Kamrul},
+  journal   = {arXiv preprint arXiv:2412.08753},
+  year      = {2024},
+  month     = {dec},
+  doi       = {10.48550/arXiv.2412.08753},
+  abbr      = {arXiv},
+  domain    = {bangla},
+  arxiv     = {2412.08753},
+  pdf       = {https://arxiv.org/pdf/2412.08753},
+  tldr      = {A Bangla augmentation framework combining pre-trained models and rule-based rewriting with meaning-preserving filtering; with only 50\% of the training data it matches models trained on the full set across five datasets.},
+  abstract  = {Data augmentation involves generating synthetic samples that resemble those in a given dataset. In resource-limited fields where high-quality data is scarce, augmentation plays a crucial role in increasing the volume of training data. This paper introduces a Bangla Text Data Augmentation (BDA) Framework that uses both pre-trained models and rule-based methods to create new variants of the text. A filtering process is included to ensure that the new text keeps the same meaning as the original while also adding variety in the words used. We conduct a comprehensive evaluation of the framework's effectiveness in Bangla text classification tasks. Our framework achieved significant improvement in F1 scores across five distinct datasets, delivering performance equivalent to models trained on 100\% of the data while utilizing only 50\% of the training dataset. Additionally, we explore the impact of data scarcity by progressively reducing the training data and augmenting it through BDA, resulting in notable F1 score enhancements. The study offers a thorough examination of BDA's performance, identifying key factors for optimal results and addressing its limitations through detailed analysis.},
+  bibtex_show = {true}
+}
+
+@inproceedings{tariquzzaman2023linguists,
+  title     = {the\_linguists at {BLP-2023} Task 1: A Novel Informal {Bangla} {Fasttext} Embedding for Violence Inciting Text Detection},
+  author    = {Tariquzzaman, Md. and Kader, Md Wasif and Anam, Audwit Nafi and Haque, Naimul and Kabir, Mohsinul and Mahmud, Hasan and Hasan, Md Kamrul},
+  booktitle = {Proceedings of the First Workshop on Bangla Language Processing (BLP-2023)},
+  year      = {2023},
+  month     = {dec},
+  pages     = {214--219},
+  publisher = {Association for Computational Linguistics},
+  doi       = {10.18653/v1/2023.banglalp-1.26},
+  url       = {https://aclanthology.org/2023.banglalp-1.26/},
+  abbr      = {BLP},
+  domain    = {bangla},
+  html      = {https://aclanthology.org/2023.banglalp-1.26/},
+  pdf       = {https://aclanthology.org/2023.banglalp-1.26.pdf},
+  tldr      = {A semi-supervised informal-Bangla FastText embedding that gives a lightweight, low-cost alternative to BanglaBERT for violence-inciting text detection (7th place in the shared task).},
+  abstract  = {This paper introduces a novel informal Bangla word embedding for designing a cost-efficient solution for the task "Violence Inciting Text Detection" which focuses on developing classification systems to categorize violence that can potentially incite further violent actions. We propose a semi-supervised learning approach by training an informal Bangla FastText embedding, which is further fine-tuned on lightweight models on task specific dataset and yielded competitive results to our initial method using BanglaBERT, which secured the 7th position with an f1-score of 73.98\%. We conduct extensive experiments to assess the efficiency of the proposed embedding and how well it generalizes in terms of violence classification, along with its coverage on the task's dataset. Our proposed Bangla IFT embedding achieved a competitive macro average F1 score of 70.45\%. Additionally, we provide a detailed analysis of our findings, delving into potential causes of misclassification in the detection of violence-inciting text.},
+  bibtex_show = {true}
+}
+
+@inproceedings{kabir2023banglabook,
+  title     = {{BanglaBook}: A Large-scale {Bangla} Dataset for Sentiment Analysis from Book Reviews},
+  author    = {Kabir, Mohsinul and Mahfuz, Obayed Bin and Raiyan, Syed Rifat and Mahmud, Hasan and Hasan, Md Kamrul},
+  booktitle = {Findings of the Association for Computational Linguistics: ACL 2023},
+  year      = {2023},
+  month     = {jul},
+  pages     = {1237--1247},
+  publisher = {Association for Computational Linguistics},
+  address   = {Toronto, Canada},
+  doi       = {10.18653/v1/2023.findings-acl.80},
+  url       = {https://aclanthology.org/2023.findings-acl.80/},
+  abbr      = {ACL},
+  additional_info = {. <strong>Findings</strong>},
+  domain    = {bangla},
+  arxiv     = {2305.06595},
+  html      = {https://aclanthology.org/2023.findings-acl.80/},
+  pdf       = {https://aclanthology.org/2023.findings-acl.80.pdf},
+  code      = {https://github.com/mohsinulkabir14/BanglaBook},
+  tldr      = {158,065 Bangla book reviews labelled positive, negative or neutral, with SVM, LSTM and Bangla-BERT baselines and an error analysis for under-resourced sentiment analysis.},
+  abstract  = {The analysis of consumer sentiment, as expressed through reviews, can provide a wealth of insight regarding the quality of a product. While the study of sentiment analysis has been widely explored in many popular languages, relatively less attention has been given to the Bangla language, mostly due to a lack of relevant data and cross-domain adaptability. To address this limitation, we present BanglaBook, a large-scale dataset of Bangla book reviews consisting of 158,065 samples classified into three broad categories: positive, negative, and neutral. We provide a detailed statistical analysis of the dataset and employ a range of machine learning models to establish baselines including SVM, LSTM, and Bangla-BERT. Our findings demonstrate a substantial performance advantage of pre-trained models over models that rely on manually crafted features, emphasizing the necessity for additional training resources in this domain. Additionally, we conduct an in-depth error analysis by examining sentiment unigrams, which may provide insight into common classification errors in under-resourced languages like Bangla.},
+  bibtex_show = {true}
+}
+
+
+% -----------------------------------------------------------------------------
+% Mathematical Reasoning
+% -----------------------------------------------------------------------------
+
+@article{raiyan2026ai4math,
+  title     = {Artificial Intelligence for Mathematical Reasoning: An Integrated Survey of Language Models, Neuro-symbolic Systems, and Verified Discovery},
+  author    = {Raiyan, Syed Rifat and Kabir, Mohsinul and Mahmud, Hasan and Hasan, Md Kamrul and Ananiadou, Sophia},
+  journal   = {arXiv preprint arXiv:2606.08728},
+  year      = {2026},
+  month     = {jun},
+  doi       = {10.48550/arXiv.2606.08728},
+  abbr      = {arXiv},
+  domain    = {reasoning},
+  arxiv     = {2606.08728},
+  pdf       = {https://arxiv.org/pdf/2606.08728},
+  code      = {https://github.com/Starscream-11813/awesome-AI4Math},
+  tldr      = {A 47-page survey of AI for mathematics, from math word problem solvers to reasoning models, theorem provers and verified discovery, with a critical look at benchmarks, saturation and failure modes.},
+  abstract  = {Mathematical reasoning has long served as a stringent test of machine intelligence; over the past decade, it has moved from a niche problem within NLP to one of the most consequential AI frontiers. This survey provides a unified account of the field's evolution, from early rule-based math word problem (MWP) solvers and template-driven geometry systems, through neural expression generation and LLM prompting, to contemporary reasoning models, multi-agent systems, neuro-symbolic theorem provers, and verified discovery workflows. We organize the landscape along four axes: (i) informal reasoning over text and diagrams; (ii) formal reasoning in proof assistants, including autoformalization, tactic prediction, compiler-guided repair, and proof search; (iii) mathematical discovery; and (iv) the inference and training-time techniques, including CoT prompting, tool use, process reward models, and RLVR, that increasingly connect generation with verification. We catalog major benchmarks and examine benchmark saturation, contamination, and reporting mismatches. We critically assess failure modes: brittleness under perturbation, reward hacking, multimodal grounding failures, fragile formalization, and the energy cost of reasoning-scale inference, and identify future directions centered on verified-discovery workflows, reasoning efficiency, and infrastructure to make AI-assisted formalization broadly usable.},
+  bibtex_show = {true}
+}
+
+@inproceedings{raiyan2023math,
+  title     = {Math Word Problem Solving by Generating Linguistic Variants of Problem Statements},
+  author    = {Raiyan, Syed Rifat and Faiyaz, Md. Nafis and Kabir, Shah Md. Jawad and Kabir, Mohsinul and Mahmud, Hasan and Hasan, Md Kamrul},
+  booktitle = {Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics (Volume 4: Student Research Workshop)},
+  year      = {2023},
+  month     = {jul},
+  pages     = {362--378},
+  publisher = {Association for Computational Linguistics},
+  address   = {Toronto, Canada},
+  doi       = {10.18653/v1/2023.acl-srw.49},
+  url       = {https://aclanthology.org/2023.acl-srw.49/},
+  abbr      = {ACL SRW},
+  domain    = {reasoning},
+  arxiv     = {2306.13899},
+  html      = {https://aclanthology.org/2023.acl-srw.49/},
+  pdf       = {https://aclanthology.org/2023.acl-srw.49.pdf},
+  code      = {https://github.com/Starscream-11813/Variational-Mathematical-Reasoning},
+  tldr      = {Makes math word problem solvers more robust by solving paraphrased variants of each problem and majority-voting the answers; also introduces the adversarial PARAMAWPS dataset.},
+  abstract  = {The art of mathematical reasoning stands as a fundamental pillar of intellectual progress and is a central catalyst in cultivating human ingenuity. Researchers have recently published a plethora of works centered around the task of solving Math Word Problems (MWP), a crucial stride towards general AI. These existing models are susceptible to dependency on shallow heuristics and spurious correlations to derive the solution expressions. In order to ameliorate this issue, in this paper, we propose a framework for MWP solvers based on the generation of linguistic variants of the problem text. The approach involves solving each of the variant problems and electing the predicted expression with the majority of the votes. We use DeBERTa (Decoding-enhanced BERT with disentangled attention) as the encoder to leverage its rich textual representations and enhanced mask decoder to construct the solution expressions. Furthermore, we introduce a challenging dataset, ParaMAWPS, consisting of paraphrased, adversarial, and inverse variants of selectively sampled MWPs from the benchmark MAWPS dataset. We extensively experiment on this dataset along with other benchmark datasets using some baseline MWP solver models. We show that training on linguistic variants of problem statements and voting on candidate predictions improve the mathematical reasoning and robustness of the model.},
+  bibtex_show = {true}
+}
+
+
+% -----------------------------------------------------------------------------
+% Human-Computer Interaction
+% -----------------------------------------------------------------------------
+
+@article{kabir2025islamic,
+  title     = {Islamic Lifestyle Applications: Meeting the Spiritual Needs of Modern Muslims},
+  author    = {Kabir, Mohsinul and Kabir, Mohammad Ridwan and Islam, Riasat Siam},
+  journal   = {International Journal of Human--Computer Interaction},
+  volume    = {42},
+  pages     = {12200--12228},
+  year      = {2025},
+  month     = {dec},
+  publisher = {Taylor \& Francis},
+  doi       = {10.1080/10447318.2025.2595545},
+  abbr      = {IJHCI},
+  domain    = {hci},
+  arxiv     = {2402.02061},
+  html      = {https://www.tandfonline.com/doi/full/10.1080/10447318.2025.2595545},
+  pdf       = {https://www.tandfonline.com/doi/epdf/10.1080/10447318.2025.2595545},
+  tldr      = {Reviews 11 popular Islamic lifestyle apps through self-determination theory and interviews 10 devoted users, finding weak support for learning, community and scholar consultation, and proposing concrete design implications.},
+  abstract  = {We evaluated contemporary Islamic lifestyle applications supporting religious practices and motivation among Muslims. We reviewed 11 popular applications using self-determination theory and the technology-as-experience framework to assess their support for motivation and affective needs. Most applications lack features that foster autonomy, competence, and relatedness. We also interviewed ten devoted Muslim application users to gain insights into their experiences and unmet needs. Our findings indicate that existing applications fall short in providing comprehensive learning, social connections, and scholar consultations. We propose design implications based on our results, including guided religious information, shareability, virtual community engagement, scholarly question-answering, and personalized reminders. We aim to inform the design of Islamic lifestyle applications that better facilitate ritual practices, benefitting application designers and Muslim communities. Our research provides valuable insights into the untapped potential for lifestyle applications to act as religious companions supporting Muslims' spiritual journey.},
+  bibtex_show = {true}
 }
 
 @article{kabir2020gaming,
-  author = {Kabir, M and Dhruba, QFF and Mahmud, H and Hasan, MK and Zaman, AR},
-  journal = {International Journal of Human-Computer Interaction},
-  year = {2020},
-  month = {},
-  note = {},
+  title     = {Gaming Insight: Conversion of Popular Sedentary Games into Motion-Based Form},
+  author    = {Kabir, Mohsinul and Dhruba, Quazi Fahim Faisal and Mahmud, Hasan and Hasan, Md Kamrul and Zaman, A. R.},
+  journal   = {International Journal of Human--Computer Interaction},
+  volume    = {36},
+  number    = {13},
+  pages     = {1205--1215},
+  year      = {2020},
+  month     = {feb},
   publisher = {Taylor \& Francis},
-  title = {Gaming Insight: Conversion of Popular Sedentary Games into Motion-Based Form},
-  doi = {10.1080/10447318.2020.1726597},
-  pdf = {https://d1wqtxts1xzle7.cloudfront.net/112941299/10447318.2020.172659720240401-1-fsy75b-libre.pdf?1712014819=&response-content-disposition=inline%3B+filename%3DGaming_Insight_Conversion_of_Popular_Sed.pdf&Expires=1762873628&Signature=T4FCTE2QYfZDM52M-8GVcHBBvatmM0qjeCJPQ-eA-nGCLvA83OvyS~5Jxs6LFXeRxZsLW~HyL5-0MA-QF4v~mFQm0jbj~USmGF6d~BPGAZGI5ndk7~ZedeFYoekhZxXTdmK3wLavFgLx8AqIUpdak-FJwdP3Fx1khAiMBKSjTv0MjeRMNBXHNKlcQmOinmyjX8rtbdi1zCapj0EuGNFU~ixXNUi3-qsNHrtNlGdm6U14wH3wqNQ-XqAdY8cSxhUb-WdIKvDhoSvIeZcVay5fw7pLxp-FA2d30INlADoEYreVLxgrN2Ov1UnmH0T3pgUHMN7N5lAOdGauKSdl9~YeCw__&Key-Pair-Id=APKAJLOHF5GGSLRBV4ZA},
-  preview = {ijhci.jpeg},
-  bibtex_show = {true},
-  abbr = {HCI},
-  selected = {}
+  doi       = {10.1080/10447318.2020.1726597},
+  abbr      = {IJHCI},
+  domain    = {hci},
+  html      = {https://www.tandfonline.com/doi/full/10.1080/10447318.2020.1726597},
+  code      = {https://github.com/mohsinulkabir14/Human-Responsive-Flappy-Bird-using-Xbox-Kinect-and-Unity},
+  tldr      = {Rebuilds Flappy Bird and Temple Run as Kinect motion games and studies players to identify what makes motion-based versions of familiar games as appealing and "sticky" as the originals.},
+  abstract  = {Motion-based gaming can aptly substitute an individual's daily exercise requirements while being a great source of entertainment. Conversion of sedentary-based games into motion-based form can reach more gamers who are otherwise avoiding daily exercises. Toward that end, there is scope for research on the factors to be considered to retain a greater number of players by recreating the games they are already accustomed to playing. Hence, we developed the motion-based forms of two popular sedentary games, Flappy Bird, and Temple Run. We then conducted a study incorporating both of the games with a group of participants. By analyzing the user experience through feedback and observation, we determined the key factors involved in converting conventional games into motion-based form. Our study shows that if specific considerations are made, motion-based forms of sedentary games have the potential to be more or similarly appealing and can achieve greater retention when compared to their sedentary counterpart.},
+  bibtex_show = {true}
 }
 
 
+% -----------------------------------------------------------------------------
+% Applied Machine Learning & Datasets
+% -----------------------------------------------------------------------------
+
+@article{sakib2025nfr,
+  title     = {A Benchmark Dataset and {LLMs} Comparison for {NFR} Classification with Explainable {AI}},
+  author    = {Sakib, Esrat Ebtida and Akib, Md Ahnaf and Mazumder, Md Muktadir and Raida, Maliha Noushin and Kabir, Mohsinul},
+  journal   = {arXiv preprint arXiv:2510.18096},
+  year      = {2025},
+  month     = {oct},
+  doi       = {10.48550/arXiv.2510.18096},
+  abbr      = {arXiv},
+  domain    = {applied-ml},
+  arxiv     = {2510.18096},
+  pdf       = {https://arxiv.org/pdf/2510.18096},
+  tldr      = {An expanded non-functional requirements dataset from project charters and OSS docs, used to compare six language models with LIME explanations; Gemma-2 performs best (F1 0.88).},
+  abstract  = {Non-Functional Requirements (NFRs) play a critical role in determining the overall quality and user satisfaction of software systems. Accurately identifying and classifying NFRs is essential to ensure that software meets performance, usability, and reliability expectations. However, manual identification of NFRs from documentation is time-consuming and prone to errors, necessitating automated solutions. Before implementing any automated solution, a robust and comprehensive dataset is essential. To build such a dataset, we collected NFRs from various Project Charters and Open Source Software Documentation. This enhanced the technical depth and usability of an already existing NFR dataset. We categorized NFRs into sub-classes and identified needs using widely used Large Language Models to facilitate automation. After classifying the NFRs, we compared the classification results of the selected LLMs: RoBERTa, CodeBERT, Gemma-2, Phi-3, Mistral-8B, and Llama-3.1-8B using various evaluation metrics, including precision, recall, F1-score, and lime scores. Among these models, Gemma-2 achieved the best results with a precision of 0.87, recall of 0.89, and F1-score of 0.88, alongside a lime hit score of 78 out of 80. Phi-3 closely followed with a precision of 0.85, recall of 0.87, F1-score of 0.86, and the highest lime hit score of 79.},
+  bibtex_show = {true}
+}
+
+@article{sakib2025recipe,
+  title     = {Towards Automated Recipe Genre Classification Using Semi-Supervised Learning},
+  author    = {Sakib, Nazmus and Shahariar, G. M. and Kabir, Mohsinul and Hasan, Md Kamrul and Mahmud, Hasan},
+  journal   = {PLOS ONE},
+  volume    = {20},
+  number    = {1},
+  pages     = {e0317697},
+  year      = {2025},
+  month     = {jan},
+  publisher = {Public Library of Science},
+  doi       = {10.1371/journal.pone.0317697},
+  abbr      = {PLOS ONE},
+  domain    = {applied-ml},
+  arxiv     = {2310.15693},
+  html      = {https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0317697},
+  pdf       = {https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0317697&type=printable},
+  tldr      = {Extends the 3A2M recipe dataset with richer named entities (3A2M+) and classifies two million recipes into nine genres with 98.6\% accuracy; recipe titles turn out to be the strongest signal.},
+  abstract  = {Sharing cooking recipes is a great way to exchange culinary ideas and provide instructions for food preparation. However, categorizing raw recipes found online into appropriate food genres can be challenging due to a lack of adequate labeled data. In this study, we present a dataset named the Assorted, Archetypal, and Annotated Two Million Extended (3A2M+) Cooking Recipe Dataset that contains two million culinary recipes labeled in respective categories with extended named entities extracted from recipe descriptions. This collection of data includes various features such as title, NER, directions, and extended NER, as well as nine different labels representing genres including bakery, drinks, non-veg, vegetables, fast food, cereals, meals, sides, and fusions. The proposed pipeline named 3A2M+ extends the size of the Named Entity Recognition (NER) list to address missing named entities like heat, time or process from the recipe directions using two NER extraction tools. 3A2M+ dataset provides a comprehensive solution to the various challenging recipe-related tasks, including classification, named entity recognition, and recipe generation. Furthermore, we have demonstrated traditional machine learning, deep learning and pre-trained language models to classify the recipes into their corresponding genre and achieved an overall accuracy of 98.6\%. Our investigation indicates that the title feature played a more significant role in classifying the genre.},
+  bibtex_show = {true}
+}
+
+@article{shams2025asteroid,
+  title     = {Asteroid Family Classification with Machine Learning: Investigative Analysis of a Novel Two-Step Approach for Categorizing Known Small Asteroid Families},
+  author    = {Shams, Fatin Abrar and Nafiz, Abdullah Al Mahmud and Mohosheu, Md. Salman and Hoque, Maheen Mashrur and Abir, Samiur Rashid and Ratul, Rashed Hasan and Mushfique, Md. Mushfiqur Rahman and Nazim, Aftab Ibn and Khan, Rubaiat Rehman and Mahmudunnobe, Md and Kabir, Mohsinul},
+  journal   = {Experimental Astronomy},
+  volume    = {59},
+  number    = {1},
+  pages     = {11},
+  year      = {2025},
+  month     = {jan},
+  publisher = {Springer},
+  doi       = {10.1007/s10686-025-09982-y},
+  abbr      = {Exp. Astron.},
+  domain    = {applied-ml},
+  html      = {https://link.springer.com/article/10.1007/s10686-025-09982-y},
+  tldr      = {A two-step classifier (XGBoost for small vs. large families, then Random Forest) that tackles class imbalance in asteroid family classification, achieving a perfect F1 for 90 of 112 families.},
+  abstract  = {The term "asteroid family" refers to a collection of asteroids that share similar proper orbital elements such as semi-major axis, eccentricities, and orbital inclinations. Detecting small asteroid families has proved to be a challenge for a long time because of their extremely low sample size. In general, standalone machine learning classifiers tend to exhibit a bias towards classes with larger sample sizes, resulting in the inadequate classification of asteroid families with limited data. In this paper, a two-step supervised model was proposed for the effective classification of the asteroid families, especially for the tiny, small, and lower groups of medium asteroid families. The proposed model uses two-step classification in an attempt to resolve the challenges that come with the imbalanced dataset where at first a binary classification of small and large families was done with an XGB (Extreme Gradient boosting) classifier and then in the second stage Random Forest classifier was used alongside previously identified binary features to classify asteroid families. The proposed model performed better with higher F1 scores for tiny and small asteroid families compared to other algorithms tested in this work. It also achieved a perfect F1 score for 90 families, among 112 families which were tested. As for the lower group of medium sized asteroid families, it performed slightly worse compared to the previously used machine learning algorithms. Along with this, four dataset imbalance handling techniques have been employed in this work and compared to the proposed algorithm.},
+  bibtex_show = {true}
+}
+
+@article{islam2024qualitycontrol,
+  title     = {Deep Learning and Computer Vision Techniques for Enhanced Quality Control in Manufacturing Processes},
+  author    = {Islam, Md Raisul and Zamil, Md. Zakir Hossain and Rayed, Md Eshmam and Kabir, Mohsinul and Mridha, M. F. and Nishimura, Satoshi and Shin, Jungpil},
+  journal   = {IEEE Access},
+  volume    = {12},
+  pages     = {121449--121479},
+  year      = {2024},
+  month     = {sep},
+  publisher = {IEEE},
+  doi       = {10.1109/ACCESS.2024.3453664},
+  abbr      = {IEEE Access},
+  domain    = {applied-ml},
+  tldr      = {A systematic review of deep learning and computer vision for automated defect detection in manufacturing, covering detection, classification and prediction methods and open challenges such as lighting, complex defects and workflow integration.},
+  abstract  = {Ensuring product quality and integrity is paramount in the rapidly evolving landscape of industrial manufacturing. Although effective to a certain degree, traditional quality control methods often fail to meet the demands for efficiency, accuracy, and adaptability in today's fast-paced production environments. The advent of Deep Learning (DL) and Computer Vision (CV) technologies has opened new vistas for automated defect detection, promising to revolutionize the way industries approach quality control and inspection. This systematic review focuses on recent advancements in DL and CV applications for automated defect detection in manufacturing processes. It provides a comprehensive overview of state-of-the-art techniques for detecting, classifying, and predicting defects, highlighting the significant strides made in addressing challenges such as varying lighting conditions, complex defect patterns, and the seamless integration of these technologies into existing manufacturing workflows. Through a critical analysis of current methodologies, this study identifies key areas of opportunity, outlines the challenges that persist and suggests directions for future research. This review synthesizes findings from a broad spectrum of industrial applications, offering insights into the potential of DL and CV to enhance quality control mechanisms.},
+  bibtex_show = {true}
+}
+
+@inproceedings{sakib2022cooking,
+  title     = {Assorted, Archetypal and Annotated Two Million {(3A2M)} Cooking Recipes Dataset Based on Active Learning},
+  author    = {Sakib, Nazmus and Shahariar, G. M. and Kabir, Mohsinul and Hasan, Md Kamrul and Mahmud, Hasan},
+  booktitle = {Machine Intelligence and Emerging Technologies (MIET 2022)},
+  series    = {Lecture Notes of the Institute for Computer Sciences, Social Informatics and Telecommunications Engineering},
+  volume    = {491},
+  pages     = {188--203},
+  year      = {2023},
+  publisher = {Springer},
+  doi       = {10.1007/978-3-031-34622-4_15},
+  abbr      = {MIET},
+  domain    = {applied-ml},
+  arxiv     = {2303.16778},
+  html      = {https://link.springer.com/chapter/10.1007/978-3-031-34622-4_15},
+  pdf       = {https://arxiv.org/pdf/2303.16778},
+  code      = {https://github.com/nazmussakib009/3A2M},
+  tldr      = {Two million recipes labelled into nine genres: 300K by food experts, and the rest by active learning with query-by-committee and human-in-the-loop verification.},
+  abstract  = {Cooking recipes allow individuals to exchange culinary ideas and provide food preparation instructions. Due to a lack of adequate labeled data, categorizing raw recipes found online to the appropriate food genres is a challenging task in this domain. Utilizing the knowledge of domain experts to categorize recipes could be a solution. In this study, we present a novel dataset of two million culinary recipes labeled in respective categories leveraging the knowledge of food experts and an active learning technique. To construct the dataset, we collect the recipes from the RecipeNLG dataset. Then, we employ three human experts whose trustworthiness score is higher than 86.667\% to categorize 300K recipe by their Named Entity Recognition (NER) and assign it to one of the nine categories: bakery, drinks, non-veg, vegetables, fast food, cereals, meals, sides and fusion. Finally, we categorize the remaining 1900K recipes using Active Learning method with a blend of Query-by-Committee and Human In The Loop (HITL) approaches. There are more than two million recipes in our dataset, each of which is categorized and has a confidence score linked with it. For the 9 genres, the Fleiss Kappa score of this massive dataset is roughly 0.56026. We believe that the research community can use this dataset to perform various machine learning tasks such as recipe genre classification, recipe generation of a specific genre, new recipe creation, etc.},
+  bibtex_show = {true}
 }

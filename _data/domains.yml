@@ -1,0 +1,51 @@
+# Research domains used to group papers on /publications/.
+# Each paper in _bibliography/papers.bib has a `domain` field matching one `key` below.
+# Sections are shown in the order listed here.
+
+- key: culture
+  title: Cultural Understanding & Cross-Cultural NLP
+  short: Culture
+  icon: fa-solid fa-earth-asia
+  description: Can language models perceive, reason about and adapt to culture? Benchmarks and evaluations of cultural alignment, cross-cultural reasoning and cultural drift in translation.
+
+- key: trust
+  title: Bias, Misinformation & Trustworthy LLMs
+  short: Bias & Trust
+  icon: fa-solid fa-scale-balanced
+  description: Where bias comes from and how it propagates in language models, and how LLMs behave when detecting or producing misleading information.
+
+- key: mental-health
+  title: Mental Health & Online Harms
+  short: Mental Health
+  icon: fa-solid fa-heart-pulse
+  description: Datasets and models for detecting depression severity and cyberbullying in social media text.
+
+- key: figurative
+  title: Sarcasm & Figurative Language
+  short: Sarcasm
+  icon: fa-solid fa-masks-theater
+  description: Computational analysis and generation of sarcasm, including emoji-augmented sarcastic text.
+
+- key: bangla
+  title: Bangla & Low-Resource NLP
+  short: Bangla NLP
+  icon: fa-solid fa-language
+  description: Resources, augmentation methods and LLM evaluations for Bangla (Bengali), a widely spoken but under-resourced language.
+
+- key: reasoning
+  title: Mathematical Reasoning
+  short: Math Reasoning
+  icon: fa-solid fa-square-root-variable
+  description: Robust math word problem solving and a survey of AI for mathematical reasoning.
+
+- key: hci
+  title: Human-Computer Interaction
+  short: HCI
+  icon: fa-solid fa-hand-pointer
+  description: Designing technology around people, from motion-based games to religious lifestyle applications.
+
+- key: applied-ml
+  title: Applied Machine Learning & Datasets
+  short: Applied ML
+  icon: fa-solid fa-flask
+  description: Machine learning applied to recipes, requirements engineering, astronomy and manufacturing.
