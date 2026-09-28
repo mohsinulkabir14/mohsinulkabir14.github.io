@@ -3,77 +3,91 @@ layout: default
 ---
 <div class="post">
   <div class="row about-row">
-
-    <!-- Left sidebar -->
-    <div class="col-12 col-md-3 about-sidebar">
-      {% if page.profile and page.profile.image %}
-        {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
-        {% if page.profile.image_circular %}
-          {% assign profile_image_class = 'img-fluid z-depth-1 rounded-circle sidebar-photo' %}
-        {% else %}
-          {% assign profile_image_class = 'img-fluid z-depth-1 rounded sidebar-photo' %}
+    <!-- Left sidebar: profile card -->
+    <aside class="col-12 col-md-4 col-lg-3 about-sidebar">
+      <div class="profile-card">
+        {% if page.profile and page.profile.image %}
+          {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
+          {% if page.profile.image_circular %}
+            {% assign profile_image_class = 'img-fluid rounded-circle sidebar-photo' %}
+          {% else %}
+            {% assign profile_image_class = 'img-fluid rounded sidebar-photo' %}
+          {% endif %}
+          {%
+            include figure.liquid loading="eager" path=profile_image_path class=profile_image_class alt="Photo of Mohsinul Kabir"
+            cache_bust=true
+          %}
         {% endif %}
-        {%
-          include figure.liquid loading="eager" path=profile_image_path class=profile_image_class alt=page.profile.image
-          cache_bust=true
-        %}
-      {% endif %}
 
-      <h3 class="sidebar-name">
-        {% if site.title == 'blank' %}
-          <strong>{{ site.first_name }}</strong>
-          {% if site.middle_name %} {{ site.middle_name }}{% endif %}
-          {{ site.last_name }}
-        {% else %}
-          {{ site.title }}
+        <h1 class="sidebar-name">
+          {% if site.title == 'blank' %}
+            {{ site.first_name }}
+            {% if site.middle_name %} {{ site.middle_name }}{% endif %}
+            {{ site.last_name }}
+          {% else %}
+            {{ site.title }}
+          {% endif %}
+        </h1>
+
+        {% if page.subtitle %}
+          <p class="sidebar-affiliation">{{ page.subtitle }}</p>
         {% endif %}
-      </h3>
 
-      {% if page.subtitle %}
-        <p class="sidebar-affiliation">{{ page.subtitle }}</p>
-      {% endif %}
+        {% if page.profile.more_info %}
+          <p class="sidebar-more-info">{{ page.profile.more_info }}</p>
+        {% endif %}
 
-      {% if page.profile.more_info %}
-        <p class="sidebar-more-info">{{ page.profile.more_info }}</p>
-      {% endif %}
-
-      {% include sidebar_social.liquid %}
-    </div>
+        {% include sidebar_social.liquid %}
+      </div>
+    </aside>
 
     <!-- Right main content -->
-    <div class="col-12 col-md-9 about-content">
-      <h1 class="post-title">
-        {% if site.title == 'blank' %}
-          <strong>{{ site.first_name }}</strong>
-          {% if site.middle_name %} {{ site.middle_name }}{% endif %}
-          {{ site.last_name }}
-        {% else %}
-          {{ site.title }}
-        {% endif %}
-      </h1>
+    <div class="col-12 col-md-8 col-lg-9 about-content">
+      <section class="about-bio">
+        {{ content }}
+      </section>
 
-      <div class="clearfix">{{ content }}</div>
+      <!-- Research interests -->
+      {% if page.interests %}
+        <section class="about-section">
+          <h2 class="section-title">Research Interests</h2>
+          <div class="interest-grid">
+            {% for item in page.interests %}
+              <a class="interest-card" href="{{ '/publications/' | relative_url }}#{{ item.domain }}">
+                <i class="{{ item.icon }}"></i>
+                <h3>{{ item.title }}</h3>
+                <p>{{ item.text }}</p>
+              </a>
+            {% endfor %}
+          </div>
+        </section>
+      {% endif %}
 
       <!-- News -->
       {% if page.announcements and page.announcements.enabled %}
-        <h2>
-          <a href="{{ '/news/' | relative_url }}" style="color: inherit">Recent News</a>
-        </h2>
-        {% include news.liquid limit=true %}
+        <section class="about-section">
+          <h2 class="section-title">
+            News
+            <a class="section-more" href="{{ '/news/' | relative_url }}">All news <i class="fa-solid fa-arrow-right"></i></a>
+          </h2>
+          {% include news.liquid limit=true %}
+        </section>
       {% endif %}
 
       <!-- Selected papers -->
       {% if page.selected_papers %}
-        <h2>
-          <a href="{{ '/publications/' | relative_url }}" style="color: inherit">Selected Publications</a>
-        </h2>
-        {% include selected_papers.liquid %}
+        <section class="about-section">
+          <h2 class="section-title">
+            Selected Publications
+            <a class="section-more" href="{{ '/publications/' | relative_url }}">All publications <i class="fa-solid fa-arrow-right"></i></a>
+          </h2>
+          {% include selected_papers.liquid %}
+        </section>
       {% endif %}
 
       {% if site.newsletter and site.newsletter.enabled and site.footer_fixed %}
         {% include newsletter.liquid center=true %}
       {% endif %}
     </div>
-
   </div>
 </div>

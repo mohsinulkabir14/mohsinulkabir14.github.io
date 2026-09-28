@@ -1,11 +1,10 @@
 ---
-layout: cv
+# The CV nav item links straight to the PDF on Google Drive.
+# To update it, replace the Drive link below (or put a PDF in assets/pdf/ and use /assets/pdf/<file>.pdf).
+layout: none
 permalink: https://drive.google.com/file/d/1r5mEobtKH764gFwxULxSPIhSMSJj7X-V/view?usp=sharing
 title: CV
 nav: true
-nav_order: 5
-cv_pdf: cv_phd_mks.pdf # you can also use external links here
-description: This is a description of the page. You can modify it in '_pages/cv.md'. You can also change or remove the top pdf download button.
-toc:
-  sidebar: left
+nav_order: 4
+sitemap: false
 ---

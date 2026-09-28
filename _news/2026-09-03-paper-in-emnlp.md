@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-🎉 Three papers accepted in EMNLP 2026. One of the papers on cross-cultural reasoning is available on [arXiv](https://arxiv.org/abs/2601.14063). 
+🎉 Three papers accepted in EMNLP 2026. One of them, [XCR-Bench](https://arxiv.org/abs/2601.14063), benchmarks cross-cultural reasoning in LLMs.
