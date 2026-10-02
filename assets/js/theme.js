@@ -1,14 +1,12 @@
 // Has to be in the head tag, otherwise a flicker effect will occur.
 
-// Toggle through light, dark, and system theme settings.
+// Toggle between light and dark. The site always opens in light mode unless the
+// visitor has switched to dark (the OS preference is deliberately ignored).
 let toggleThemeSetting = () => {
-  let themeSetting = determineThemeSetting();
-  if (themeSetting == "system") {
+  if (determineThemeSetting() == "dark") {
     setThemeSetting("light");
-  } else if (themeSetting == "light") {
-    setThemeSetting("dark");
   } else {
-    setThemeSetting("system");
+    setThemeSetting("dark");
   }
 };
 
@@ -255,8 +253,9 @@ let transTheme = () => {
 // "system". Default is "system".
 let determineThemeSetting = () => {
   let themeSetting = localStorage.getItem("theme");
-  if (themeSetting != "dark" && themeSetting != "light" && themeSetting != "system") {
-    themeSetting = "system";
+  // Default to light; this also covers visitors who had "system" saved from before
+  if (themeSetting != "dark") {
+    themeSetting = "light";
   }
   return themeSetting;
 };
